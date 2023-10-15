@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
     title: 'Buana Studios',
     tagline: 'Tempat Belajar untuk Menjadi Software Development Expert yang Zaman Now Banget!',
-    url: 'https://buana.studio',
+    url: 'https://buanastudios.github.io',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
