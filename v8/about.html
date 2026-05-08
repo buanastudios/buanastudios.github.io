@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studio | About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studio</a>
+            <div class="nav-desktop">
+                <a href="services.html">Services</a>
+                <a href="studios.html">Studios</a>
+                <a href="workshops.html">Workshops</a>
+                <a href="journal.html">Journal</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book Consultation</a>
+            </div>
+            <div class="hamburger"></div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 50vh; padding-top: 8rem;">
+        <div class="container flex-col gap-4">
+            <div class="flex-col gap-2">
+                <span class="label-small">Human Trust Anchor</span>
+                <h1 style="font-size: 3.5rem;">The <span class="text-accent">Foundation.</span></h1>
+                <p class="lead" style="max-width: 800px;">Why Buana Studio exists: To bridge the gap between abstract coding tutorials and the harsh reality of deploying and maintaining operational systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container flex-col gap-6">
+            
+            <div class="grid-2" style="align-items: center; gap: 4rem;">
+                <div class="reveal">
+                    <!-- Placeholder for professional portrait -->
+                    <div style="aspect-ratio: 3/4; background: var(--bg-card); border-radius: 8px; position: relative; border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; color: var(--border-strong);">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                </div>
+                
+                <div class="flex-col gap-4 reveal">
+                    <div class="flex-col gap-2">
+                        <span class="label-small text-accent">Principal Engineer</span>
+                        <h2 style="font-size: 2.5rem;">Engineering Reality.</h2>
+                        <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">With over 18 years of experience building operational systems across banking, educational technology, and institutional administration, I have seen frameworks rise and fall. I have seen what happens when architecture scales, and I know the true cost of technical debt.</p>
+                    </div>
+
+                    <div class="flex-col gap-2">
+                        <h3 style="font-size: 1.5rem;">Why Buana Studio?</h3>
+                        <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">The current industry is flooded with fast, surface-level tutorials and AI-generated noise. This creates a massive gap in actual engineering judgment. Teams can generate code, but they cannot sustain the systems they build.</p>
+                        <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">We exist to provide that missing operational judgment. We bring deep, practical implementation guidance to developers and institutions who need their software to survive contact with reality.</p>
+                    </div>
+
+                    <div style="margin-top: 1rem; display: flex; align-items: center; gap: 1rem;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjx0ZXh0IHk9IjIwIiBmb250LWZhbWlseT0iQ3Vyc2l2ZSIgZmlsbD0iI2MyYTA3NyI+U2lnbmF0dXJlPC90ZXh0Pjwvc3ZnPg==" alt="Signature" style="opacity: 0.5; filter: grayscale(100%);">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-flex">
+                <div class="flex-col gap-1">
+                    <span class="logo">Buana Studio</span>
+                    <span class="label-small" style="color: var(--accent-primary); letter-spacing: 0.05em;">Systems. Discipline. Implementation.</span>
+                </div>
+                <div class="footer-links" style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+                    <a href="services.html">Services</a>
+                    <a href="studios.html">Studios</a>
+                    <a href="workshops.html">Workshops</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Buana Studio.</p>
+                <p style="opacity: 0.5;">Jalan Bunga Mas No. 6, RT 7, RW 1, Kelurahan Mekar Mulya, Kecamatan Panyileukan, Kota Bandung 40614</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>
