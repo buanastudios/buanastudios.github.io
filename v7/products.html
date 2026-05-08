@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studio | Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studio</a>
+            <div class="nav-desktop">
+                <a href="services.html">Services</a>
+                <a href="studios.html">Studios</a>
+                <a href="workshops.html">Workshops</a>
+                <a href="journal.html">Journal</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 10rem;">
+        <div class="container flex-col gap-6">
+            <div class="flex-col gap-2">
+                <span class="label-small">Scalable Offerings</span>
+                <h1>Products</h1>
+                <p class="lead">Curated tools, operational SOP kits, and environments.</p>
+            </div>
+            <div class="grid-2">
+                <div class="card reveal" style="border-color: var(--accent-primary);">
+                    <h3 class="mb-2">Operational SOP Kits</h3>
+                    <p class="text-muted">Digitized templates for institutional administration.</p>
+                </div>
+                <div class="card reveal">
+                    <h3 class="mb-2">Docker Boilerplates</h3>
+                    <p class="text-muted">Pre-configured environments for local development stability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-flex">
+                <div class="flex-col gap-1"><span class="logo">Buana Studio</span></div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>

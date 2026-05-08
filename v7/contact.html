@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studio | Book Consultation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studio</a>
+            <div class="nav-desktop">
+                <a href="services.html">Services</a>
+                <a href="studios.html">Studios</a>
+                <a href="workshops.html">Workshops</a>
+                <a href="journal.html">Journal</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 10rem;">
+        <div class="container flex-col gap-6">
+            <div class="flex-col gap-2">
+                <span class="label-small">Start Here</span>
+                <h1>Book Technical Consultation</h1>
+                <p class="lead">Most clients begin with a consultation to identify bottlenecks and review operational workflows.</p>
+            </div>
+            <div class="card reveal" style="max-width: 600px;">
+                <form class="flex-col gap-3">
+                    <div class="flex-col gap-1">
+                        <label class="text-muted">Name / Organization</label>
+                        <input type="text" style="padding: 1rem; background: var(--bg-main); border: 1px solid var(--border-strong); color: #fff; border-radius: 4px; width: 100%;">
+                    </div>
+                    <div class="flex-col gap-1">
+                        <label class="text-muted">Inquiry Type</label>
+                        <select style="padding: 1rem; background: var(--bg-main); border: 1px solid var(--border-strong); color: #fff; border-radius: 4px; width: 100%;">
+                            <option>Technical Consultation</option>
+                            <option>System Rescue</option>
+                            <option>Institutional Partnership</option>
+                            <option>Workshop Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="flex-col gap-1">
+                        <label class="text-muted">Brief Description</label>
+                        <textarea rows="4" style="padding: 1rem; background: var(--bg-main); border: 1px solid var(--border-strong); color: #fff; border-radius: 4px; width: 100%;"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-flex">
+                <div class="flex-col gap-1"><span class="logo">Buana Studio</span></div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studio | Systems Engineering & Operational Support</title>
+    <meta name="description" content="Operational systems, practical software engineering, and technical partnership for developers, institutions, and operational teams.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studio</a>
+            <div class="nav-desktop">
+                <a href="services.html">Services</a>
+                <a href="studios.html">Studios</a>
+                <a href="workshops.html">Workshops</a>
+                <a href="journal.html">Journal</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book Consultation</a>
+            </div>
+            <div class="hamburger"></div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="container flex-col gap-4">
+            <div class="flex-col gap-2">
+                <span class="label-small">Operational Systems Consultancy</span>
+                <h1>Practical Implementation &<br><span class="text-accent">Operational Clarity.</span></h1>
+                <p class="lead">We help developers, schools, foundations, and operational teams build, maintain, and improve real digital systems.</p>
+            </div>
+            <div class="flex-col gap-2 hero-actions" style="margin-top: 1rem;">
+                <a href="contact.html" class="btn btn-primary">Book Technical Consultation</a>
+                <a href="services.html" class="btn btn-outline">View Operational Services</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section bg-card">
+        <div class="container flex-col gap-4 reveal text-center">
+            <h2>AI Accelerates. <span class="text-accent">Judgment Sustains.</span></h2>
+            <p class="lead" style="max-width: 800px; margin: 0 auto;">AI generates code quickly, but real systems require human engineering judgment to ensure operational continuity.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-flex">
+                <div class="flex-col gap-1">
+                    <span class="logo">Buana Studio</span>
+                    <span class="label-small" style="color: var(--accent-primary); letter-spacing: 0.05em;">Systems. Discipline. Implementation.</span>
+                </div>
+                <div class="footer-links" style="display: flex; gap: 1.5rem;">
+                    <a href="services.html">Services</a>
+                    <a href="studios.html">Studios</a>
+                    <a href="workshops.html">Workshops</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Buana Studio.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
