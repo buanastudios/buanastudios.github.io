@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studio</a>
+            <div class="nav-desktop">
+                <a href="index.html">Home</a>
+                <a href="journal.html">Journal</a>
+                <a href="objects.html">Objects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="hamburger"></div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 90vh; display: flex; align-items: center; text-align: center;">
+        <div class="container flex-col gap-4 reveal">
+            <h1 style="margin-bottom: 1rem;">Build Real Systems <br>With Confidence.</h1>
+            <p class="lead">Systems, learning, and practical tools.</p>
+            <div style="margin-top: 4rem; display: flex; gap: 2rem; justify-content: center;">
+                <a href="#offerings" class="btn btn-outline" style="border: none; opacity: 0.5;">Explore</a>
+                <a href="contact.html" class="btn btn-primary">Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="offerings" class="section">
+        <div class="container flex-col gap-6">
+            <div class="card reveal">
+                <a href="systems.html" style="text-decoration: none; color: inherit;">
+                    <h3 style="font-size: 3rem;">Systems</h3>
+                    <p class="text-muted">Operational implementation & consulting.</p>
+                </a>
+            </div>
+            <div class="card reveal">
+                <a href="learning.html" style="text-decoration: none; color: inherit;">
+                    <h3 style="font-size: 3rem;">Learning</h3>
+                    <p class="text-muted">Workshops, mentorship, coding logic.</p>
+                </a>
+            </div>
+            <div class="card reveal">
+                <a href="physical.html" style="text-decoration: none; color: inherit;">
+                    <h3 style="font-size: 3rem;">Physical</h3>
+                    <p class="text-muted">Archery & swimming.</p>
+                </a>
+            </div>
+            <div class="card reveal">
+                <a href="objects.html" style="text-decoration: none; color: inherit;">
+                    <h3 style="font-size: 3rem;">Objects</h3>
+                    <p class="text-muted">Domains, templates, tools, apparel.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-card">
+        <div class="container text-center reveal">
+            <span class="label-small">Founder</span>
+            <div style="width: 80px; height: 80px; background: var(--bg-main); border-radius: 50%; margin: 2rem auto;"></div>
+            <p class="lead" style="max-width: 600px;">Over 18 years of experience building operational systems. We exist to provide practical implementation guidance that survives reality.</p>
+            <a href="about.html" class="text-accent" style="display: block; margin-top: 2rem;">Read more →</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container text-center reveal">
+            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Start With Consultation.</h2>
+            <a href="contact.html" class="btn btn-primary">Book Session</a>
+        </div>
+    </section>
+
+    <footer class="footer" style="padding: 4rem 0; opacity: 0.5;">
+        <div class="container">
+            <div class="footer-flex">
+                <span class="logo">Buana Studio</span>
+                <div class="footer-links" style="display: flex; gap: 2rem;">
+                    <a href="index.html">Home</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="objects.html">Objects</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>
