@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studio | Physical Discipline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studio</a>
+            <div class="nav-desktop">
+                <a href="systems.html">Systems</a>
+                <a href="learning.html">Learning</a>
+                <a href="physical.html">Physical</a>
+                <a href="publishing.html">Publishing</a>
+                <a href="products.html">Products</a>
+                <a href="journal.html">Journal</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book Consultation</a>
+            </div>
+            <div class="hamburger"></div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 60vh; padding-top: 8rem;">
+        <div class="container flex-col gap-4">
+            <div class="flex-col gap-2">
+                <span class="label-small">Endurance & Focus</span>
+                <h1 style="font-size: 3.5rem;">Physical <span class="text-accent">Discipline.</span></h1>
+                <p class="lead" style="max-width: 800px;">Engineering systems require intense intellectual endurance. We view physical training not as a hobby, but as the foundational discipline required to sustain deep technical focus.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container flex-col gap-6">
+            
+            <div class="grid-2" style="align-items: stretch;">
+                <div class="card reveal" style="background: rgba(255,255,255,0.01); border-left: 2px solid var(--accent-primary);">
+                    <h3 class="mb-2" style="font-size: 2rem;">Archery</h3>
+                    <p class="text-muted mb-2">Archery is the physical manifestation of implementation. It demands emotional regulation, absolute presence, and the willingness to fail repeatedly until the mechanics are perfect. These are the exact traits required to architect and debug complex software systems.</p>
+                    <div style="margin-top: 2rem;">
+                        <span class="label-small text-muted">Focus Training</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" style="background: rgba(255,255,255,0.01); border-left: 2px solid var(--border-strong);">
+                    <h3 class="mb-2" style="font-size: 2rem;">Swimming</h3>
+                    <p class="text-muted mb-2">Swimming teaches cardiovascular endurance, rhythmic breathing, and calm under physical pressure. It clears the cognitive noise accumulated during deep work, resetting the mind for the next phase of implementation.</p>
+                    <div style="margin-top: 2rem;">
+                        <span class="label-small text-muted">Endurance Training</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal" style="margin-top: 2rem; border-color: rgba(212, 175, 55, 0.2); text-align: center; padding: 4rem 2rem;">
+                <h3 class="mb-2" style="font-size: 1.75rem;">Join The Culture of Discipline</h3>
+                <p class="text-muted" style="max-width: 600px; margin: 0 auto 2rem auto;">Physical training sessions are integrated into our broader learning and mentorship ecosystem.</p>
+                <a href="contact.html" class="btn btn-outline">Inquire About Sessions</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-flex">
+                <div class="flex-col gap-1">
+                    <span class="logo">Buana Studio</span>
+                    <span class="label-small" style="color: var(--accent-primary); letter-spacing: 0.05em;">Systems. Discipline. Implementation.</span>
+                </div>
+                <div class="footer-links" style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+                    <a href="systems.html">Systems</a>
+                    <a href="learning.html">Learning</a>
+                    <a href="physical.html">Physical</a>
+                    <a href="publishing.html">Publishing</a>
+                    <a href="products.html">Products</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Buana Studio.</p>
+                <p style="opacity: 0.5;">Jalan Bunga Mas No. 6, RT 7, RW 1, Kelurahan Mekar Mulya, Kecamatan Panyileukan, Kota Bandung 40614</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studio | Systems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studio</a>
+            <div class="nav-desktop">
+                <a href="systems.html">Systems</a>
+                <a href="learning.html">Learning</a>
+                <a href="physical.html">Physical</a>
+                <a href="publishing.html">Publishing</a>
+                <a href="products.html">Products</a>
+                <a href="journal.html">Journal</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="hamburger"></div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding-top: 12rem;">
+        <div class="container flex-col gap-4 reveal">
+            <span class="label-small">Systems</span>
+            <h1 style="font-size: 4rem; letter-spacing: -0.02em;">Operational Implementation.</h1>
+            <p class="lead" style="max-width: 600px;">Technical consulting, system rescue, and architecture for institutions.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container flex-col gap-6">
+            
+            <div class="card reveal" style="border-bottom: 1px solid var(--border-subtle) !important; padding-bottom: 3rem !important;">
+                <div class="grid-2" style="gap: 2rem;">
+                    <div><h3 style="font-size: 2rem;">Technical Consultation</h3></div>
+                    <div>
+                        <p class="text-muted" style="font-size: 1.1rem; margin-bottom: 1rem;">Architecture review, deployment strategy, and mapping operational bottlenecks.</p>
+                        <a href="contact.html" class="text-accent">Book session →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal" style="border-bottom: 1px solid var(--border-subtle) !important; padding-bottom: 3rem !important;">
+                <div class="grid-2" style="gap: 2rem;">
+                    <div><h3 style="font-size: 2rem;">System Rescue</h3></div>
+                    <div>
+                        <p class="text-muted" style="font-size: 1.1rem; margin-bottom: 1rem;">Hands-on intervention to recover failing deployments and refactor legacy debt.</p>
+                        <a href="contact.html" class="text-accent">Request review →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal" style="border-bottom: 1px solid var(--border-subtle) !important; padding-bottom: 3rem !important;">
+                <div class="grid-2" style="gap: 2rem;">
+                    <div><h3 style="font-size: 2rem;">Institutional Systems</h3></div>
+                    <div>
+                        <p class="text-muted" style="font-size: 1.1rem; margin-bottom: 1rem;">Converting manual paperwork into unified, automated administration workflows.</p>
+                        <a href="contact.html" class="text-accent">Discuss project →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal" style="padding-bottom: 3rem !important;">
+                <div class="grid-2" style="gap: 2rem;">
+                    <div><h3 style="font-size: 2rem;">Operational Retainer</h3></div>
+                    <div>
+                        <p class="text-muted" style="font-size: 1.1rem; margin-bottom: 1rem;">Long-term external systems layer ensuring architectural continuity.</p>
+                        <a href="contact.html" class="text-accent">Inquire partnership →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer" style="border-top: 1px solid var(--border-subtle);">
+        <div class="container">
+            <div class="footer-flex">
+                <div class="flex-col gap-1">
+                    <span class="logo">Buana Studio</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>

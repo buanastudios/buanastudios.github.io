@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studio | Contact & Inquiry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-input {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--bg-main);
+            border: 1px solid var(--border-strong);
+            color: var(--text-main);
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 1px var(--accent-glow);
+        }
+        .form-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studio</a>
+            <div class="nav-desktop">
+                <a href="systems.html">Systems</a>
+                <a href="learning.html">Learning</a>
+                <a href="physical.html">Physical</a>
+                <a href="publishing.html">Publishing</a>
+                <a href="products.html">Products</a>
+                <a href="journal.html">Journal</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book Consultation</a>
+            </div>
+            <div class="hamburger"></div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 50vh; padding-top: 8rem;">
+        <div class="container flex-col gap-4">
+            <div class="flex-col gap-2">
+                <span class="label-small">Start Here</span>
+                <h1 style="font-size: 3.5rem;">Begin <span class="text-accent">Engagement.</span></h1>
+                <p class="lead" style="max-width: 800px;">Whether you need to debug a server deployment, request educational materials, or inquire about physical discipline training, it all starts with a single point of contact.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container grid-2" style="gap: 4rem; align-items: start;">
+            
+            <!-- Onboarding Form -->
+            <div class="card reveal" style="padding: 3rem 2rem;">
+                <form class="flex-col gap-4">
+                    <div>
+                        <label class="form-label">Name / Organization</label>
+                        <input type="text" class="form-input" placeholder="How should we address you?">
+                    </div>
+                    <div>
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" placeholder="For correspondence">
+                    </div>
+                    <div>
+                        <label class="form-label">Ecosystem Focus</label>
+                        <select class="form-input">
+                            <option>Technical Consultation (Software/Systems)</option>
+                            <option>Learning & Mentorship Frameworks</option>
+                            <option>Physical Training (Archery/Swimming)</option>
+                            <option>Publishing & Homeschool Materials</option>
+                            <option>Long-Term Operational Partnership</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-label">Inquiry Details</label>
+                        <textarea class="form-input" rows="5" placeholder="Provide context about what capability or system you are trying to build."></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" style="padding: 1.2rem; width: 100%; font-size: 1.1rem; margin-top: 1rem;">Submit Inquiry</button>
+                </form>
+            </div>
+
+            <!-- Expectations & Address -->
+            <div class="flex-col gap-6 reveal" style="transition-delay: 0.2s;">
+                
+                <div class="flex-col gap-3">
+                    <h3 style="font-size: 1.75rem;">Engagement Protocol</h3>
+                    <div class="flex-col gap-2">
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span class="text-accent" style="font-size: 1.25rem;">01</span>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Response Timeline</h4>
+                                <p class="text-muted" style="font-size: 0.95rem;">All inquiries across the ecosystem are reviewed within 24-48 business hours.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span class="text-accent" style="font-size: 1.25rem;">02</span>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Diagnostic First</h4>
+                                <p class="text-muted" style="font-size: 0.95rem;">For software projects, the initial engagement is purely diagnostic. We do not write code until the architecture is clear.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span class="text-accent" style="font-size: 1.25rem;">03</span>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Discipline Matching</h4>
+                                <p class="text-muted" style="font-size: 0.95rem;">For physical training and mentorship, we ensure mutual alignment on long-term discipline before beginning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="background: var(--bg-main); padding: 2rem; border-color: var(--border-strong);">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Studio Location</h3>
+                    <p class="text-muted" style="line-height: 1.8;">
+                        Jalan Bunga Mas No. 6,<br>
+                        RT 7, RW 1, Kelurahan Mekar Mulya,<br>
+                        Kecamatan Panyileukan,<br>
+                        Kota Bandung 40614<br>
+                        Indonesia
+                    </p>
+                    <a href="mailto:contact@buanastudio.com" class="text-accent" style="display: inline-block; margin-top: 1rem;">contact@buanastudio.com</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-flex">
+                <div class="flex-col gap-1">
+                    <span class="logo">Buana Studio</span>
+                    <span class="label-small" style="color: var(--accent-primary); letter-spacing: 0.05em;">Systems. Discipline. Implementation.</span>
+                </div>
+                <div class="footer-links" style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+                    <a href="systems.html">Systems</a>
+                    <a href="learning.html">Learning</a>
+                    <a href="physical.html">Physical</a>
+                    <a href="publishing.html">Publishing</a>
+                    <a href="products.html">Products</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Buana Studio.</p>
+                <p style="opacity: 0.5;">Jalan Bunga Mas No. 6, RT 7, RW 1, Kelurahan Mekar Mulya, Kecamatan Panyileukan, Kota Bandung 40614</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>
