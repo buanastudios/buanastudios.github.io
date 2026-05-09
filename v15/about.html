@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studios | About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studios</a>
+            <div class="nav-desktop">
+                <a href="index.html">Home</a>
+                <a href="journal.html">Journal</a>
+                <a href="essentials.html">Essentials</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
+        <div class="container reveal">
+            <span class="label-small">The Studio</span>
+            <h1 style="margin-bottom: 2rem;">Practical <br>Experience.</h1>
+            <p class="lead" style="margin: 0; max-width: 600px;">Over 18 years of bridging technical theory and operational reality.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container reveal">
+            <div style="max-width: 700px;">
+                <p class="lead" style="color: var(--text-main); font-family: var(--font-serif); font-size: 2rem; line-height: 1.4; margin-bottom: 3rem;">"We believe that true capability is developed through discipline and the responsibility to build systems that survive deployment."</p>
+                <p class="text-muted" style="line-height: 1.8;">The studio unifies software engineering, homeschooling frameworks, and physical discipline under a single philosophy of intentional practice. Our background spans banking architecture, institutional administration, and technical mentorship.</p>
+                <p class="text-muted" style="line-height: 1.8; margin-top: 2rem;">We don't just provide services; we provide implementation guidance for those who care about the long-term stability of their systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="logo">Buana Studios</span>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>
