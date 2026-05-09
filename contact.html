@@ -23,7 +23,7 @@
             border-bottom-color: var(--accent-primary);
         }
     </style>
-</head>
+<link rel="manifest" href="manifest.json">`n</head>
 <body>
     <nav class="navbar">
         <div class="container nav-flex">
@@ -80,7 +80,7 @@
                         allowfullscreen>
                     </iframe>
                 </div>
-                <a href="mailto:contact@buanastudio.com" class="text-main" style="text-decoration: none; margin-top: 2rem; display: block;">contact@buanastudio.com</a>
+                <a href="mailto:contact@buana.studio" class="text-main" style="text-decoration: none; margin-top: 2rem; display: block;">contact@buana.studio</a>
             </div>
         </div>
     </section>
@@ -100,5 +100,6 @@
             document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
         });
     </script>
-</body>
+<script>`nif ('serviceWorker' in navigator) {`n  window.addEventListener('load', () => {`n    navigator.serviceWorker.register('/sw.js');`n  });`n}`n</script>`n</body>
 </html>
+

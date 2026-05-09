@@ -6,7 +6,7 @@
     <title>Buana Studio | Journal</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-</head>
+<link rel="manifest" href="manifest.json">`n</head>
 <body>
     <nav class="navbar">
         <div class="container nav-flex">
@@ -80,5 +80,6 @@
             document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
         });
     </script>
-</body>
+<script>`nif ('serviceWorker' in navigator) {`n  window.addEventListener('load', () => {`n    navigator.serviceWorker.register('/sw.js');`n  });`n}`n</script>`n</body>
 </html>
+
