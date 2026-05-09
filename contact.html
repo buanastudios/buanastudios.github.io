@@ -60,9 +60,27 @@
                 <button type="button" class="btn btn-primary" style="width: 100%; padding: 1.5rem;">Submit</button>
             </form>
 
-            <div style="margin-top: 8rem; opacity: 0.5;">
-                <p>Jalan Bunga Mas No. 6,<br> Bandung 40614, Indonesia</p>
-                <a href="mailto:contact@buanastudio.com" class="text-main" style="text-decoration: none;">contact@buanastudio.com</a>
+            <div class="flex-col gap-6 reveal">
+                <div>
+                    <h3 style="margin-bottom: 1rem;">Location</h3>
+                    <p class="text-muted" style="line-height: 1.8;">
+                        Jalan Bunga Mas No. 6,<br>
+                        RT 7, RW 1, Kelurahan Mekar Mulya,<br>
+                        Kecamatan Panyileukan,<br>
+                        Kota Bandung 40614
+                    </p>
+                </div>
+                <div class="map-container" style="width: 100%; height: 300px; background: var(--bg-card); border-radius: 4px; overflow: hidden; margin-top: 2rem;">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Jl.%20Bunga%20Mas%20No.6,%20Mekar%20Mulya,%20Panyileukan,%20Bandung%20City,%20West%20Java%2040614&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        style="border:0; filter: grayscale(1) invert(0.9);" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <a href="mailto:contact@buanastudio.com" class="text-main" style="text-decoration: none; margin-top: 2rem; display: block;">contact@buanastudio.com</a>
             </div>
         </div>
     </section>
