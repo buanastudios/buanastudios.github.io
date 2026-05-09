@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -7,15 +8,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .anchor-section { padding: 16rem 0; }
-        .discovery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem; }
-        @media (max-width: 768px) { .discovery-grid { grid-template-columns: 1fr; gap: 4rem; } .anchor-section { padding: 8rem 0; } }
-        .discovery-item { border-top: 1px solid var(--border-subtle); padding-top: 2rem; transition: opacity 0.3s ease; text-decoration: none; color: inherit; display: block; }
-        .discovery-item:hover { opacity: 0.6; }
-        .discovery-item h4 { font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 400; }
-        .discovery-item p { font-size: 0.95rem; opacity: 0.6; }
+        .anchor-section {
+            padding: 16rem 0;
+        }
+
+        .discovery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .discovery-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .anchor-section {
+                padding: 8rem 0;
+            }
+        }
+
+        .discovery-item {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 2rem;
+            transition: opacity 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .discovery-item:hover {
+            opacity: 0.6;
+        }
+
+        .discovery-item h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .discovery-item p {
+            font-size: 0.95rem;
+            opacity: 0.6;
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="container nav-flex">
@@ -23,7 +62,7 @@
             <div class="nav-desktop">
                 <a href="index.html">Home</a>
                 <a href="journal.html">Journal</a>
-                <a href="objects.html">Objects</a>
+                <a href="essentials.html">Essentials</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="hamburger"></div>
@@ -32,7 +71,8 @@
 
     <section class="hero" style="min-height: 80vh; display: flex; align-items: center; text-align: center;">
         <div class="container flex-col gap-4 reveal">
-            <h1 style="margin-bottom: 1rem; font-size: clamp(2.5rem, 8vw, 5rem); letter-spacing: -0.03em;">Build Real Systems <br>With Confidence.</h1>
+            <h1 style="margin-bottom: 1rem; font-size: clamp(2.5rem, 8vw, 5rem); letter-spacing: -0.03em;">Learn. Build.
+                Practice.</h1>
             <p class="lead" style="max-width: 600px; font-weight: 300;">Thoughtful systems and practical learning.</p>
             <div style="margin-top: 4rem; display: flex; gap: 2rem; justify-content: center;">
                 <a href="#focus" class="btn btn-outline" style="border: none; opacity: 0.4;">Explore</a>
@@ -45,8 +85,13 @@
         <div class="container reveal">
             <div style="max-width: 800px;">
                 <span class="label-small" style="margin-bottom: 2rem; display: block;">Primary Focus</span>
-                <h2 style="font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 2rem; letter-spacing: -0.02em;">Systems & <br>Practical Guidance</h2>
-                <p class="lead" style="margin-left: 0; max-width: 600px; font-size: 1.4rem; opacity: 0.8; margin-bottom: 3rem;">Helping people and organizations build reliable operational systems, improve workflows, and implement ideas practically.</p>
+                <h2
+                    style="font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 2rem; letter-spacing: -0.02em;">
+                    Systems & <br>Practical Guidance</h2>
+                <p class="lead"
+                    style="margin-left: 0; max-width: 600px; font-size: 1.4rem; opacity: 0.8; margin-bottom: 3rem;">
+                    Helping people and organizations build reliable operational systems, improve workflows, and
+                    implement ideas practically.</p>
                 <a href="systems.html" class="btn btn-outline">Explore Systems →</a>
             </div>
         </div>
@@ -68,9 +113,9 @@
                     <h4>Publishing</h4>
                     <p>Worksheets, books, and structured educational resources.</p>
                 </a>
-                <a href="objects.html" class="discovery-item">
-                    <h4>Objects</h4>
-                    <p>Domains, templates, and useful studio tools.</p>
+                <a href="essentials.html" class="discovery-item">
+                    <h4>Essentials</h4>
+                    <p>Curated templates, domains, and operational tools.</p>
                 </a>
             </div>
         </div>
@@ -79,8 +124,12 @@
     <section class="section bg-card">
         <div class="container text-center reveal">
             <span class="label-small">Founder</span>
-            <p class="lead" style="max-width: 600px; margin: 2rem auto; font-size: 1.2rem; line-height: 1.8;">Over 18 years of experience building operational systems. We exist to provide practical guidance that survives reality.</p>
-            <a href="about.html" class="text-accent" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none;">Approach →</a>
+            <p class="lead" style="max-width: 600px; margin: 2rem auto; font-size: 1.2rem; line-height: 1.8;">Over 18
+                years of experience building operational systems. We exist to provide practical guidance that survives
+                reality.</p>
+            <a href="about.html" class="text-accent"
+                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none;">Approach
+                →</a>
         </div>
     </section>
 
@@ -99,7 +148,7 @@
                 <div class="footer-links" style="display: flex; gap: 2rem;">
                     <a href="index.html">Home</a>
                     <a href="journal.html">Journal</a>
-                    <a href="objects.html">Objects</a>
+                    <a href="essentials.html">Essentials</a>
                     <a href="contact.html">Contact</a>
                 </div>
             </div>
@@ -114,4 +163,5 @@
         });
     </script>
 </body>
+
 </html>
