@@ -1,60 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Buana Studios</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Buana Studios | Architectural Editorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .anchor-section {
-            padding: 16rem 0;
-        }
-
-        .discovery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .discovery-grid {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-
-            .anchor-section {
-                padding: 8rem 0;
-            }
-        }
-
-        .discovery-item {
-            border-top: 1px solid var(--border-subtle);
-            padding-top: 2rem;
-            transition: opacity 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .discovery-item:hover {
-            opacity: 0.6;
-        }
-
-        .discovery-item h4 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 400;
-        }
-
-        .discovery-item p {
-            font-size: 0.95rem;
-            opacity: 0.6;
-        }
-    </style>
-<link rel="manifest" href="manifest.json">`n</head>
-
+    <link rel="manifest" href="manifest.json">
+</head>
 <body>
     <nav class="navbar">
         <div class="container nav-flex">
@@ -65,105 +18,127 @@
                 <a href="essentials.html">Essentials</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <div class="hamburger"></div>
+            <div class="hamburger" style="display: none;"></div>
         </div>
     </nav>
 
-    <section class="hero" style="min-height: 80vh; display: flex; align-items: center; text-align: center;">
+    <section class="hero" style="min-height: 90vh; display: flex; align-items: center; text-align: center;">
         <div class="container flex-col gap-4 reveal">
-            <h1 style="margin-bottom: 1rem; font-size: clamp(2.5rem, 8vw, 5rem); letter-spacing: -0.03em;">Learn. Build.
-                Practice.</h1>
-            <p class="lead" style="max-width: 600px; font-weight: 300;">Thoughtful systems and practical learning.</p>
-            <div style="margin-top: 4rem; display: flex; gap: 2rem; justify-content: center;">
-                <a href="#focus" class="btn btn-outline" style="border: none; opacity: 0.4;">Explore</a>
-                <a href="contact.html" class="btn btn-primary">Consultation</a>
+            <h1 style="margin-bottom: 2rem;">Build Real Systems <br>With Confidence.</h1>
+            <p class="lead" style="max-width: 600px; margin: 0 auto;">Practical systems, learning, and guidance <br>for organizations and individuals.</p>
+            <div style="margin-top: 5rem; display: flex; gap: 2rem; justify-content: center;">
+                <a href="#focus" class="btn btn-outline" style="border: none; opacity: 0.4;">Explore Archive</a>
+                <a href="contact.html" class="btn btn-primary">Book Consultation</a>
             </div>
         </div>
     </section>
 
-    <section id="focus" class="anchor-section">
+    <section id="focus" class="section" style="background: rgba(255,255,255,0.01);">
         <div class="container reveal">
-            <div style="max-width: 800px;">
-                <span class="label-small" style="margin-bottom: 2rem; display: block;">Primary Focus</span>
-                <h2
-                    style="font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 2rem; letter-spacing: -0.02em;">
-                    Systems & <br>Practical Guidance</h2>
-                <p class="lead"
-                    style="margin-left: 0; max-width: 600px; font-size: 1.4rem; opacity: 0.8; margin-bottom: 3rem;">
-                    Helping people and organizations build reliable operational systems, improve workflows, and
-                    implement ideas practically.</p>
-                <a href="systems.html" class="btn btn-outline">Explore Systems →</a>
+            <div style="max-width: 900px;">
+                <span class="label-small">Primary Anchor</span>
+                <h2 style="margin-bottom: 3rem;">Systems & <br>Practical Guidance</h2>
+                <p class="lead" style="margin-left: 0; max-width: 700px; margin-bottom: 4rem;">We bridge the gap between technical theory and operational reality. From architecture audits to implementation rescue, we ensure systems survive deployment.</p>
+                
+                <div class="diagnostic-box">
+                    <h4 style="color: var(--text-main); font-size: 1rem; margin-bottom: 1rem;">System Diagnostic</h4>
+                    <p class="text-muted">What are you currently implementing?</p>
+                    <div class="diagnostic-grid">
+                        <div class="diagnostic-option" onclick="location.href='systems.html'">
+                            <span style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem;">Institutional Software</span>
+                            <span class="label-small" style="margin: 0; font-size: 0.6rem;">Schools & Foundations</span>
+                        </div>
+                        <div class="diagnostic-option" onclick="location.href='systems.html'">
+                            <span style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem;">Operational Rescue</span>
+                            <span class="label-small" style="margin: 0; font-size: 0.6rem;">Fixing Broken Code</span>
+                        </div>
+                        <div class="diagnostic-option" onclick="location.href='learning.html'">
+                            <span style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem;">Capability Culture</span>
+                            <span class="label-small" style="margin: 0; font-size: 0.6rem;">Technical Mentorship</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section" style="padding-top: 0;">
+    <section class="section">
         <div class="container reveal">
-            <span class="label-small" style="margin-bottom: 4rem; display: block;">Discovery</span>
-            <div class="discovery-grid">
-                <a href="learning.html" class="discovery-item">
+            <span class="label-small">Studio Index</span>
+            <div class="discovery-index">
+                <a href="learning.html" class="index-item">
                     <h4>Learning</h4>
-                    <p>Workshops, mentorship, and guided technical learning.</p>
+                    <p>Technical mentorship and coding logic workshops.</p>
                 </a>
-                <a href="practice.html" class="discovery-item">
+                <a href="practice.html" class="index-item">
                     <h4>Practice</h4>
-                    <p>Archery, swimming, and sessions for focus and discipline.</p>
+                    <p>Focus through archery, swimming, and responsibility.</p>
                 </a>
-                <a href="objects.html" class="discovery-item">
-                    <h4>Publishing</h4>
-                    <p>Worksheets, books, and structured educational resources.</p>
+                <a href="journal.html" class="index-item">
+                    <h4>Notes</h4>
+                    <p>Editorial insights on systems and discipline.</p>
                 </a>
-                <a href="essentials.html" class="discovery-item">
+                <a href="essentials.html" class="index-item">
                     <h4>Essentials</h4>
-                    <p>Curated templates, domains, and operational tools.</p>
+                    <p>Curated tools, domains, and operational frameworks.</p>
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="section bg-card">
+    <section class="section bg-card" style="border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
         <div class="container text-center reveal">
             <span class="label-small">Founder</span>
-            <p class="lead" style="max-width: 600px; margin: 2rem auto; font-size: 1.2rem; line-height: 1.8;">Over 18
-                years of experience building operational systems. We exist to provide practical guidance that survives
-                reality.</p>
-            <a href="about.html" class="text-accent"
-                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none;">Approach
-                →</a>
+            <p class="lead" style="max-width: 600px; margin: 2rem auto; font-family: var(--font-serif); font-style: italic;">"True capability is developed through discipline and the responsibility to build systems that actually work."</p>
+            <a href="about.html" class="text-accent" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none;">View Profile →</a>
         </div>
     </section>
 
     <section class="section">
         <div class="container text-center reveal">
-            <h2 style="font-size: 2rem; margin-bottom: 1rem; font-weight: 400;">Start With Consultation.</h2>
-            <p class="text-muted" style="margin-bottom: 3rem;">Every project begins with clarity.</p>
-            <a href="contact.html" class="btn btn-primary">Book Session</a>
+            <h2 style="margin-bottom: 1rem;">Start With Clarity.</h2>
+            <p class="text-muted" style="margin-bottom: 4rem;">Every project begins with a diagnostic consultation.</p>
+            <a href="contact.html" class="btn btn-primary">Book Consultation</a>
         </div>
     </section>
 
-    <footer class="footer" style="padding: 4rem 0; opacity: 0.5;">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-flex">`n                <div class="flex-col gap-1">`n                    `n                    <a href="tel:+6285720502217" class="text-muted" style="text-decoration: none; font-size: 0.9rem;">+62 857 2050 2217 (SMS/Call)</a>`n                </div>
-                
-                <div class="footer-links" style="display: flex; gap: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4rem;">
+                <div class="flex-col gap-2">
+                    <span class="logo">Buana Studios</span>
+                    <a href="tel:+6285720502217" class="text-muted" style="font-size: 0.9rem;">+62 857 2050 2217 (SMS/Call)</a>
+                </div>
+                <div class="nav-desktop" style="display: flex;">
                     <a href="index.html">Home</a>
                     <a href="journal.html">Journal</a>
                     <a href="essentials.html">Essentials</a>
                     <a href="contact.html">Contact</a>
                 </div>
             </div>
+            <p style="margin-top: 4rem; opacity: 0.3; font-size: 0.8rem;">Jalan Bunga Mas No. 6, Bandung 40614, Indonesia</p>
         </div>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
             }, { threshold: 0.1 });
             document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+
+            window.addEventListener('scroll', () => {
+                const nav = document.querySelector('.navbar');
+                if (window.scrollY > 50) nav.classList.add('scrolled');
+                else nav.classList.remove('scrolled');
+            });
         });
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
     </script>
-<script>`nif ('serviceWorker' in navigator) {`n  window.addEventListener('load', () => {`n    navigator.serviceWorker.register('/sw.js');`n  });`n}`n</script>`n</body>
-
+</body>
 </html>
-
-

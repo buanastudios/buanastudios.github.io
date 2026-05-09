@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Buana Studios | Journal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-<link rel="manifest" href="manifest.json">`n</head>
+    <link rel="manifest" href="manifest.json">
+</head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar scrolled">
         <div class="container nav-flex">
             <a href="index.html" class="logo">Buana Studios</a>
             <div class="nav-desktop">
@@ -17,61 +18,40 @@
                 <a href="essentials.html">Essentials</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <div class="hamburger"></div>
         </div>
     </nav>
 
-    <section class="hero" style="padding-top: 12rem;">
-        <div class="container flex-col gap-4 reveal">
-            <span class="label-small">Studio Notes</span>
-            <h1 style="font-size: 4rem; letter-spacing: -0.02em;">Journal.</h1>
-            <p class="lead" style="margin-left: 0;">Restrained explorations of systems, discipline, and responsibility.</p>
+    <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
+        <div class="container reveal">
+            <span class="label-small">Insights</span>
+            <h1 style="margin-bottom: 2rem;">Studio Notes.</h1>
+            <p class="lead" style="margin: 0; max-width: 600px;">Editorial explorations of systems, discipline, and responsibility.</p>
         </div>
     </section>
 
     <section class="section">
-        <div class="container flex-col gap-2">
-            
-            <div class="shelf-item reveal">
-                <a href="#" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: flex-end;">
-                    <div>
-                        <span class="label-small">Systems</span>
-                        <h3>Designing for Edge Cases</h3>
-                    </div>
-                    <span>Read</span>
-                </a>
-            </div>
-
-            <div class="shelf-item reveal">
-                <a href="#" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: flex-end;">
-                    <div>
-                        <span class="label-small">Practice</span>
-                        <h3>The Focus of Archery</h3>
-                    </div>
-                    <span>Read</span>
-                </a>
-            </div>
-
-            <div class="shelf-item reveal">
-                <a href="#" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: flex-end;">
-                    <div>
-                        <span class="label-small">Capability</span>
-                        <h3>Systems Thinking in Education</h3>
-                    </div>
-                    <span>Read</span>
-                </a>
-            </div>
-
+        <div class="container flex-col reveal">
+            <a href="#" class="index-item">
+                <h4 style="font-size: 2.5rem;">Responsibility Through Implementation</h4>
+                <p>On the discipline of building things that work.</p>
+            </a>
+            <a href="#" class="index-item">
+                <h4 style="font-size: 2.5rem;">Designing for Edge Cases</h4>
+                <p>Software architecture as a form of risk management.</p>
+            </a>
+            <a href="#" class="index-item">
+                <h4 style="font-size: 2.5rem;">The Focus of Archery</h4>
+                <p>Applying traditional discipline to modern workflows.</p>
+            </a>
         </div>
     </section>
 
-    <footer class="footer" style="padding: 4rem 0; opacity: 0.5;">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-flex">`n                <div class="flex-col gap-1">`n                    `n                    <a href="tel:+6285720502217" class="text-muted" style="text-decoration: none; font-size: 0.9rem;">+62 857 2050 2217 (SMS/Call)</a>`n                </div>
-                
-            </div>
+            <span class="logo">Buana Studios</span>
         </div>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver((entries) => {
@@ -79,8 +59,11 @@
             }, { threshold: 0.1 });
             document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
         });
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
     </script>
-<script>`nif ('serviceWorker' in navigator) {`n  window.addEventListener('load', () => {`n    navigator.serviceWorker.register('/sw.js');`n  });`n}`n</script>`n</body>
+</body>
 </html>
-
-

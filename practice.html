@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Buana Studios | Practice</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-<link rel="manifest" href="manifest.json">`n</head>
+    <link rel="manifest" href="manifest.json">
+</head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar scrolled">
         <div class="container nav-flex">
             <a href="index.html" class="logo">Buana Studios</a>
             <div class="nav-desktop">
@@ -17,58 +18,49 @@
                 <a href="essentials.html">Essentials</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <div class="hamburger"></div>
         </div>
     </nav>
 
-    <section class="hero" style="padding-top: 12rem;">
-        <div class="container flex-col gap-4 reveal">
-            <span class="label-small">Guided Practice</span>
-            <h1 style="font-size: 4rem; letter-spacing: -0.02em;">Practice.</h1>
-            <p class="lead" style="margin-left: 0;">Developing focus and responsibility through physical and organizational discipline.</p>
+    <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
+        <div class="container reveal">
+            <span class="label-small">Discipline</span>
+            <h1 style="margin-bottom: 2rem;">Practical <br>Discipline.</h1>
+            <p class="lead" style="margin: 0; max-width: 600px;">Developing focus and responsibility through physical and organizational practice.</p>
         </div>
     </section>
 
     <section class="section">
-        <div class="container flex-col gap-2">
-            
-            <div class="shelf-item reveal">
+        <div class="container flex-col reveal">
+            <div class="shelf-item">
                 <div>
-                    <span class="label-small">Organizational</span>
                     <h3>Responsibility Sessions</h3>
-                    <p class="text-muted" style="margin-top: 0.5rem;">Practical sessions on leadership, implementation, and guided behavior.</p>
+                    <p class="text-muted">Guided leadership and implementation behavior for individuals and teams.</p>
                 </div>
                 <a href="contact.html" class="text-accent">Book</a>
             </div>
-
-            <div class="shelf-item reveal">
+            <div class="shelf-item">
                 <div>
-                    <span class="label-small">Physical</span>
                     <h3>Traditional Archery</h3>
-                    <p class="text-muted" style="margin-top: 0.5rem;">Developing mental regulation and precision through the discipline of the bow.</p>
+                    <p class="text-muted">Developing precision and mental regulation through the bow.</p>
                 </div>
                 <a href="contact.html" class="text-accent">Inquire</a>
             </div>
-
-            <div class="shelf-item reveal">
+            <div class="shelf-item">
                 <div>
-                    <span class="label-small">Physical</span>
                     <h3>Endurance Swimming</h3>
-                    <p class="text-muted" style="margin-top: 0.5rem;">Rhythmic breathing and endurance training for physical focus.</p>
+                    <p class="text-muted">Cardiovascular discipline and rhythmic focus in the water.</p>
                 </div>
                 <a href="contact.html" class="text-accent">Inquire</a>
             </div>
-
         </div>
     </section>
 
-    <footer class="footer" style="padding: 4rem 0; opacity: 0.5;">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-flex">`n                <div class="flex-col gap-1">`n                    `n                    <a href="tel:+6285720502217" class="text-muted" style="text-decoration: none; font-size: 0.9rem;">+62 857 2050 2217 (SMS/Call)</a>`n                </div>
-                
-            </div>
+            <span class="logo">Buana Studios</span>
         </div>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver((entries) => {
@@ -76,8 +68,11 @@
             }, { threshold: 0.1 });
             document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
         });
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
     </script>
-<script>`nif ('serviceWorker' in navigator) {`n  window.addEventListener('load', () => {`n    navigator.serviceWorker.register('/sw.js');`n  });`n}`n</script>`n</body>
+</body>
 </html>
-
-
