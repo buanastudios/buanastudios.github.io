@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studios | Technical Learning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studios</a>
+            <div class="nav-desktop">
+                <a href="index.html">Home / Beranda</a>
+                <a href="journal.html">Notes / Catatan</a>
+                <a href="essentials.html">Essentials / Produk</a>
+                <a href="contact.html">Contact / Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
+        <div class="container reveal">
+            <span class="label-small" style="color: var(--accent-primary);">Thinking in Code / Berpikir dalam Kode</span>
+            <h1 style="margin-bottom: 2rem;">
+                Technical <br>Learning.
+                <span class="lang-id">Pembelajaran Teknis.</span>
+            </h1>
+            <p class="lead" style="margin: 0; max-width: 600px;">
+                Learn to think, not just to type. Master the logic of coding and the architecture of software systems.
+                <span class="lang-id" style="font-size: 1.1rem; margin-top: 1rem;">Belajar untuk berpikir, bukan sekadar mengetik. Kuasai logika pemrograman dan arsitektur sistem perangkat lunak.</span>
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container flex-col reveal">
+            <div class="shelf-item">
+                <div>
+                    <h3>Coding Logic Guide / <span class="lang-id" style="display: inline;">Panduan Logika Pemrograman</span></h3>
+                    <p class="text-muted">A structured guide to master systems thinking and logical problem solving.</p>
+                    <p class="lang-id">Panduan terstruktur untuk menguasai pemikiran sistem dan pemecahan masalah logis.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Get Access / Dapatkan</a>
+            </div>
+            <div class="shelf-item">
+                <div>
+                    <h3>1-on-1 Mentorship / <span class="lang-id" style="display: inline;">Mentoring Privat</span></h3>
+                    <p class="text-muted">Direct technical guidance for career transition or high-level skill acquisition.</p>
+                    <p class="lang-id">Bimbingan teknis langsung untuk transisi karier atau penguasaan keahlian tingkat tinggi.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Apply / Daftar</a>
+            </div>
+            <div class="shelf-item">
+                <div>
+                    <h3>Homeschool Support / <span class="lang-id" style="display: inline;">Dukungan Homeschool</span></h3>
+                    <p class="text-muted">Practical implementation for parents integrating technical discipline at home.</p>
+                    <p class="lang-id">Implementasi praktis bagi orang tua yang mengintegrasikan disiplin teknis di rumah.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Discuss / Diskusi</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="logo">Buana Studios</span>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studios | Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <style>
+        input, select, textarea {
+            width: 100%;
+            padding: 1.5rem 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border-strong);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            border-radius: 0;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-bottom-color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studios</a>
+            <div class="nav-desktop">
+                <a href="index.html">Home / Beranda</a>
+                <a href="journal.html">Notes / Catatan</a>
+                <a href="essentials.html">Essentials / Produk</a>
+                <a href="contact.html">Contact / Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
+        <div class="container reveal">
+            <span class="label-small" style="color: var(--accent-primary);">Inquiry / Kontak</span>
+            <h1 style="margin-bottom: 2rem;">
+                Start With <br>Clarity.
+                <span class="lang-id">Mulai dengan Kejelasan.</span>
+            </h1>
+            <p class="lead" style="margin: 0; max-width: 600px;">
+                Every project begins with a diagnostic consultation.
+                <span class="lang-id" style="font-size: 1.1rem; margin-top: 1rem;">Setiap proyek dimulai dengan konsultasi diagnostik.</span>
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container reveal">
+            <form style="max-width: 600px;">
+                <input type="email" placeholder="Email Address / Alamat Email">
+                <select>
+                    <option>Technical Thinking (Learn) / Berpikir Teknis</option>
+                    <option>Sunnah Discipline (Practice) / Disiplin Sunnah</option>
+                    <option>ISO Systems (Build) / Sistem ISO</option>
+                    <option>Brand Guides (Essentials) / Panduan Brand</option>
+                </select>
+                <textarea rows="4" placeholder="Briefly describe your challenge / Jelaskan tantangan Anda secara singkat."></textarea>
+                <button type="button" class="btn btn-primary" style="width: 100%; padding: 1.5rem;">Submit Inquiry / Kirim</button>
+            </form>
+
+            <div style="margin-top: 10rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Direct / Langsung</h4>
+                    <a href="mailto:contact@buana.studio" style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem;">contact@buana.studio</a>
+                    <a href="tel:+6285720502217" style="opacity: 0.5;">+62 857 2050 2217 (SMS/Call)</a>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Location / Lokasi</h4>
+                    <p style="opacity: 0.5; line-height: 1.6;">
+                        Jalan Bunga Mas No. 6,<br>
+                        Bandung 40614, Indonesia
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="logo">Buana Studios</span>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>
