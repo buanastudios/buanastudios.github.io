@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studios | Software Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studios</a>
+            <div class="nav-desktop">
+                <a href="index.html">Home</a>
+                <a href="journal.html">Journal</a>
+                <a href="essentials.html">Essentials</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
+        <div class="container reveal">
+            <span class="label-small" style="color: var(--accent-primary);">We Build</span>
+            <h1 style="margin-bottom: 2rem;">Software Engineering <br>& Implementation.</h1>
+            <p class="lead" style="margin: 0; max-width: 600px;">We design and build robust digital systems for schools, foundations, and modern organizations.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container flex-col reveal">
+            <div class="shelf-item">
+                <div>
+                    <h3>Institutional Dashboards</h3>
+                    <p class="text-muted">Custom administration software for educational foundations and non-profits.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Discuss Project</a>
+            </div>
+            <div class="shelf-item">
+                <div>
+                    <h3>Architecture Audits</h3>
+                    <p class="text-muted">Professional diagnostic reports on technical debt and system stability.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Book Audit</a>
+            </div>
+            <div class="shelf-item">
+                <div>
+                    <h3>Implementation Rescue</h3>
+                    <p class="text-muted">Direct intervention for failing software projects and broken codebases.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Request Help</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="logo">Buana Studios</span>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>
