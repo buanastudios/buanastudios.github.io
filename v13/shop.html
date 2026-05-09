@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studio | Studio Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studio</a>
+            <div class="nav-desktop">
+                <a href="index.html">Home</a>
+                <a href="journal.html">Journal</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="hamburger"></div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding-top: 12rem;">
+        <div class="container flex-col gap-4 reveal">
+            <span class="label-small">Shop</span>
+            <h1 style="font-size: 4rem;">Studio Tools.</h1>
+            <p class="lead" style="margin-left: 0;">Curated resources for learning, implementation, and infrastructure.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container flex-col gap-2">
+            
+            <div class="shelf-item reveal">
+                <div>
+                    <span class="label-small">Educational Resources</span>
+                    <h3>Homeschool Worksheets</h3>
+                    <p class="text-muted" style="margin-top: 0.5rem;">Printable, Sunnah-oriented learning systems for parents.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Inquire</a>
+            </div>
+
+            <div class="shelf-item reveal">
+                <div>
+                    <span class="label-small">Infrastructure</span>
+                    <h3>Premium Domains</h3>
+                    <p class="text-muted" style="margin-top: 0.5rem;">Curated domains for starting meaningful new projects.</p>
+                </div>
+                <a href="contact.html" class="text-accent">View Portfolio</a>
+            </div>
+
+            <div class="shelf-item reveal">
+                <div>
+                    <span class="label-small">Engineering</span>
+                    <h3>Docker Boilerplates</h3>
+                    <p class="text-muted" style="margin-top: 0.5rem;">Robust local development environments for Laravel and PHP.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Get Access</a>
+            </div>
+
+            <div class="shelf-item reveal">
+                <div>
+                    <span class="label-small">Digital Templates</span>
+                    <h3>Operational SOP Frameworks</h3>
+                    <p class="text-muted" style="margin-top: 0.5rem;">Standard Operating Procedure kits for organizational clarity.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Inquire</a>
+            </div>
+
+            <div class="shelf-item reveal">
+                <div>
+                    <span class="label-small">Apparel</span>
+                    <h3>Studio Uniforms</h3>
+                    <p class="text-muted" style="margin-top: 0.5rem;">Minimalist uniforms reflecting the studio's discipline.</p>
+                </div>
+                <span class="text-muted">In Production</span>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer" style="padding: 4rem 0; opacity: 0.5;">
+        <div class="container">
+            <div class="footer-flex">
+                <span class="logo">Buana Studio</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>

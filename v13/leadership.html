@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studio | Leadership</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studio</a>
+            <div class="nav-desktop">
+                <a href="index.html">Home</a>
+                <a href="journal.html">Journal</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="hamburger"></div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding-top: 12rem;">
+        <div class="container flex-col gap-4 reveal">
+            <span class="label-small">Leadership</span>
+            <h1 style="font-size: 4rem;">Responsibility.</h1>
+            <p class="lead" style="margin-left: 0;">Practical leadership sessions focused on organizational implementation and responsibility.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container flex-col gap-2">
+            
+            <div class="shelf-item reveal">
+                <div>
+                    <h3>Leadership Mentoring</h3>
+                    <p class="text-muted" style="margin-top: 0.5rem;">One-on-one sessions for organizational leaders and project managers.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Book Session</a>
+            </div>
+
+            <div class="shelf-item reveal">
+                <div>
+                    <h3>Implementation Culture</h3>
+                    <p class="text-muted" style="margin-top: 0.5rem;">Developing a studio-wide culture of accountability and disciplined action.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Inquire</a>
+            </div>
+
+            <div class="shelf-item reveal">
+                <div>
+                    <h3>Organizational Clarity</h3>
+                    <p class="text-muted" style="margin-top: 0.5rem;">Mapping responsibilities and reducing structural bottlenecks in your team.</p>
+                </div>
+                <a href="contact.html" class="text-accent">Discuss</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer" style="padding: 4rem 0; opacity: 0.5;">
+        <div class="container">
+            <div class="footer-flex">
+                <span class="logo">Buana Studio</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>
