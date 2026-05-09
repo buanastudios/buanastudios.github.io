@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Buana Studios | Journal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.json">
 </head>
-<body>
+<body data-lang="en">
     <nav class="navbar scrolled">
         <div class="container nav-flex">
             <a href="index.html" class="logo">Buana Studios</a>
             <div class="nav-desktop">
-                <a href="index.html">Home / Beranda</a>
-                <a href="journal.html">Notes / Catatan</a>
-                <a href="essentials.html">Essentials / Produk</a>
-                <a href="contact.html">Contact / Kontak</a>
+                <a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+                <a href="journal.html"><span class="en">Notes</span><span class="id">Catatan</span></a>
+                <a href="essentials.html"><span class="en">Essentials</span><span class="id">Produk</span></a>
+                <a href="contact.html"><span class="en">Contact</span><span class="id">Kontak</span></a>
+                <div class="lang-toggle" onclick="toggleLang()">
+                    <span id="btn-en">EN</span> / <span id="btn-id">ID</span>
+                </div>
             </div>
         </div>
     </nav>
 
     <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
         <div class="container reveal">
-            <span class="label-small" style="color: var(--accent-primary);">Notes / Catatan</span>
-            <h1 style="margin-bottom: 2rem;">
-                Studio Notes.
-                <span class="lang-id">Catatan Studio.</span>
+            <span class="label-small" style="color: var(--accent-primary);"><span class="en">Notes</span><span class="id">Catatan</span></span>
+            <h1>
+                <span class="en">Studio Notes.</span>
+                <span class="id">Catatan Studio.</span>
             </h1>
             <p class="lead" style="margin: 0; max-width: 600px;">
-                Insights on software engineering, Sunnah discipline, and institutional responsibility.
-                <span class="lang-id" style="font-size: 1.1rem; margin-top: 1rem;">Wawasan tentang rekayasa perangkat lunak, disiplin Sunnah, dan tanggung jawab institusional.</span>
+                <span class="en">Insights on software engineering, Sunnah discipline, and institutional responsibility.</span>
+                <span class="id">Wawasan tentang rekayasa perangkat lunak, disiplin Sunnah, dan tanggung jawab institusional.</span>
             </p>
         </div>
     </section>
@@ -38,19 +41,25 @@
     <section class="section">
         <div class="container flex-col reveal">
             <a href="#" class="index-item">
-                <h4 style="font-size: 2.2rem;">Responsibility Through Implementation / <span class="lang-id" style="display: inline;">Tanggung Jawab Melalui Implementasi</span></h4>
-                <p>On the discipline of building systems that survive deployment.</p>
-                <p class="lang-id">Tentang disiplin dalam membangun sistem yang bertahan setelah penerapan.</p>
+                <h4><span class="en">Responsibility Through Implementation</span><span class="id">Tanggung Jawab Melalui Implementasi</span></h4>
+                <p>
+                    <span class="en">On the discipline of building systems that survive deployment.</span>
+                    <span class="id">Tentang disiplin dalam membangun sistem yang bertahan setelah penerapan.</span>
+                </p>
             </a>
             <a href="#" class="index-item">
-                <h4 style="font-size: 2.2rem;">The Focus of Archery / <span class="lang-id" style="display: inline;">Fokus dalam Panahan</span></h4>
-                <p>How physical discipline translates into technical precision.</p>
-                <p class="lang-id">Bagaimana disiplin fisik diterjemahkan menjadi presisi teknis.</p>
+                <h4><span class="en">The Focus of Archery</span><span class="id">Fokus dalam Panahan</span></h4>
+                <p>
+                    <span class="en">How physical discipline translates into technical precision.</span>
+                    <span class="id">Bagaimana disiplin fisik diterjemahkan menjadi presisi teknis.</span>
+                </p>
             </a>
             <a href="#" class="index-item">
-                <h4 style="font-size: 2.2rem;">ISO 9001 Mindset / <span class="lang-id" style="display: inline;">Pola Pikir ISO 9001</span></h4>
-                <p>Preparing organizations for high-standard clarity and accountability.</p>
-                <p class="lang-id">Mempersiapkan organisasi untuk kejelasan dan akuntabilitas standar tinggi.</p>
+                <h4><span class="en">ISO 9001 Mindset</span><span class="id">Pola Pikir ISO 9001</span></h4>
+                <p>
+                    <span class="en">Preparing organizations for high-standard clarity and accountability.</span>
+                    <span class="id">Mempersiapkan organisasi untuk kejelasan dan akuntabilitas standar tinggi.</span>
+                </p>
             </a>
         </div>
     </section>
@@ -62,7 +71,20 @@
     </footer>
 
     <script>
+        function updateLangUI(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-id').classList.toggle('active', lang === 'id');
+            localStorage.setItem('buana-lang', lang);
+        }
+        function toggleLang() {
+            const current = localStorage.getItem('buana-lang') || 'en';
+            const next = current === 'en' ? 'id' : 'en';
+            updateLangUI(next);
+        }
         document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('buana-lang') || 'en';
+            updateLangUI(savedLang);
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
             }, { threshold: 0.1 });

@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Buana Studios | Systems & Organization</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <title>Buana Studios | Systems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.json">
 </head>
-<body>
+<body data-lang="en">
     <nav class="navbar scrolled">
         <div class="container nav-flex">
             <a href="index.html" class="logo">Buana Studios</a>
             <div class="nav-desktop">
-                <a href="index.html">Home / Beranda</a>
-                <a href="journal.html">Notes / Catatan</a>
-                <a href="essentials.html">Essentials / Produk</a>
-                <a href="contact.html">Contact / Kontak</a>
+                <a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+                <a href="journal.html"><span class="en">Notes</span><span class="id">Catatan</span></a>
+                <a href="essentials.html"><span class="en">Essentials</span><span class="id">Produk</span></a>
+                <a href="contact.html"><span class="en">Contact</span><span class="id">Kontak</span></a>
+                <div class="lang-toggle" onclick="toggleLang()">
+                    <span id="btn-en">EN</span> / <span id="btn-id">ID</span>
+                </div>
             </div>
         </div>
     </nav>
 
     <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
         <div class="container reveal">
-            <span class="label-small" style="color: var(--accent-primary);">ISO-Ready / Standar ISO</span>
-            <h1 style="margin-bottom: 2rem;">
-                Systems & <br>Organization.
-                <span class="lang-id">Sistem & Organisasi.</span>
+            <span class="label-small" style="color: var(--accent-primary);"><span class="en">ISO-Ready</span><span class="id">Standar ISO</span></span>
+            <h1>
+                <span class="en">Systems & <br>Organization.</span>
+                <span class="id">Sistem & <br>Organisasi.</span>
             </h1>
             <p class="lead" style="margin: 0; max-width: 600px;">
-                Organizing institutions with a high-standard documentation mindset. Ready for audit, built for scale.
-                <span class="lang-id" style="font-size: 1.1rem; margin-top: 1rem;">Mengorganisir institusi dengan pola pikir dokumentasi standar tinggi. Siap audit, dibangun untuk berkembang.</span>
+                <span class="en">Organizing institutions with a high-standard documentation mindset. Ready for audit, built for scale.</span>
+                <span class="id">Mengorganisir institusi dengan pola pikir dokumentasi standar tinggi. Siap audit, dibangun untuk berkembang.</span>
             </p>
         </div>
     </section>
@@ -39,27 +42,33 @@
         <div class="container flex-col reveal">
             <div class="shelf-item">
                 <div>
-                    <h3>Institutional Training / <span class="lang-id" style="display: inline;">Pelatihan Institusi</span></h3>
-                    <p class="text-muted">Workshops on organizational clarity and accountability workflows.</p>
-                    <p class="lang-id">Lokakarya tentang kejelasan organisasi dan alur kerja akuntabilitas.</p>
+                    <h3><span class="en">Institutional Training</span><span class="id">Pelatihan Institusi</span></h3>
+                    <p>
+                        <span class="en">Workshops on organizational clarity and accountability workflows.</span>
+                        <span class="id">Lokakarya tentang kejelasan organisasi dan alur kerja akuntabilitas.</span>
+                    </p>
                 </div>
-                <a href="contact.html" class="text-accent">Schedule / Jadwalkan</a>
+                <a href="contact.html" class="text-accent"><span class="en">Schedule</span><span class="id">Jadwalkan</span></a>
             </div>
             <div class="shelf-item">
                 <div>
-                    <h3>Documentation Audits / <span class="lang-id" style="display: inline;">Audit Dokumentasi</span></h3>
-                    <p class="text-muted">Preparing your company for ISO 9001 readiness through rigorous systems review.</p>
-                    <p class="lang-id">Mempersiapkan perusahaan Anda untuk kesiapan ISO 9001 melalui tinjauan sistem yang ketat.</p>
+                    <h3><span class="en">Documentation Audits</span><span class="id">Audit Dokumentasi</span></h3>
+                    <p>
+                        <span class="en">Preparing your company for ISO 9001 readiness through rigorous systems review.</span>
+                        <span class="id">Mempersiapkan perusahaan Anda untuk kesiapan ISO 9001 melalui tinjauan sistem yang ketat.</span>
+                    </p>
                 </div>
-                <a href="contact.html" class="text-accent">Discuss / Diskusi</a>
+                <a href="contact.html" class="text-accent"><span class="en">Discuss</span><span class="id">Diskusi</span></a>
             </div>
             <div class="shelf-item">
                 <div>
-                    <h3>Operational Architecture / <span class="lang-id" style="display: inline;">Arsitektur Operasional</span></h3>
-                    <p class="text-muted">Building software systems for schools and foundations that prioritize order.</p>
-                    <p class="lang-id">Membangun sistem perangkat lunak untuk sekolah dan yayasan yang mengutamakan keteraturan.</p>
+                    <h3><span class="en">Operational Architecture</span><span class="id">Arsitektur Operasional</span></h3>
+                    <p>
+                        <span class="en">Building software systems for schools and foundations that prioritize order.</span>
+                        <span class="id">Membangun sistem perangkat lunak untuk sekolah dan yayasan yang mengutamakan keteraturan.</span>
+                    </p>
                 </div>
-                <a href="contact.html" class="text-accent">Request / Permintaan</a>
+                <a href="contact.html" class="text-accent"><span class="en">Request Help</span><span class="id">Minta Bantuan</span></a>
             </div>
         </div>
     </section>
@@ -71,7 +80,20 @@
     </footer>
 
     <script>
+        function updateLangUI(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-id').classList.toggle('active', lang === 'id');
+            localStorage.setItem('buana-lang', lang);
+        }
+        function toggleLang() {
+            const current = localStorage.getItem('buana-lang') || 'en';
+            const next = current === 'en' ? 'id' : 'en';
+            updateLangUI(next);
+        }
         document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('buana-lang') || 'en';
+            updateLangUI(savedLang);
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
             }, { threshold: 0.1 });

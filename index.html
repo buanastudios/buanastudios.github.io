@@ -4,82 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Buana Studios | Learn. Build. Practice.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.json">
 </head>
-<body>
+<body data-lang="en">
     <nav class="navbar">
         <div class="container nav-flex">
             <a href="index.html" class="logo">Buana Studios</a>
             <div class="nav-desktop">
-                <a href="index.html">Home / Beranda</a>
-                <a href="journal.html">Notes / Catatan</a>
-                <a href="essentials.html">Essentials / Produk</a>
-                <a href="contact.html">Contact / Kontak</a>
+                <a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+                <a href="journal.html"><span class="en">Notes</span><span class="id">Catatan</span></a>
+                <a href="essentials.html"><span class="en">Essentials</span><span class="id">Produk</span></a>
+                <a href="contact.html"><span class="en">Contact</span><span class="id">Kontak</span></a>
+                <div class="lang-toggle" onclick="toggleLang()">
+                    <span id="btn-en">EN</span> / <span id="btn-id">ID</span>
+                </div>
             </div>
         </div>
     </nav>
 
     <section class="hero" style="min-height: 95vh; display: flex; align-items: center; text-align: center;">
         <div class="container flex-col gap-4 reveal">
-            <h1 style="margin-bottom: 2rem;">
-                Learn. Build. Practice.
-                <span class="lang-id" style="font-size: clamp(2rem, 5vw, 3rem); display: block;">Belajar. Bangun. Praktik.</span>
+            <h1>
+                <span class="en">Learn. Build. Practice.</span>
+                <span class="id">Belajar. Bangun. Praktik.</span>
             </h1>
             <p class="lead" style="max-width: 700px; margin: 0 auto;">
-                Beyond tutorials and checklists. Master the logic of coding, the discipline of Sunnah, and the systems of a high-standard institution.
-                <span class="lang-id" style="font-size: 1.1rem; margin-top: 1rem; opacity: 0.6;">Melampaui tutorial dan daftar periksa. Kuasai logika pemrograman, disiplin Sunnah, dan sistem institusi standar tinggi.</span>
+                <span class="en">Beyond tutorials and checklists. Master the logic of coding, the discipline of Sunnah, and the systems of a high-standard institution.</span>
+                <span class="id">Melampaui tutorial dan daftar periksa. Kuasai logika pemrograman, disiplin Sunnah, dan sistem institusi standar tinggi.</span>
             </p>
             <div style="margin-top: 5rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-primary">Start Transformation / Mulai</a>
-                <a href="#offerings" class="btn btn-outline" style="border: none; opacity: 0.4;">The Products / Produk Kami</a>
+                <a href="contact.html" class="btn btn-primary">
+                    <span class="en">Start Transformation</span>
+                    <span class="id">Mulai Transformasi</span>
+                </a>
+                <a href="#offerings" class="btn btn-outline" style="border: none; opacity: 0.4;">
+                    <span class="en">The Products</span>
+                    <span class="id">Produk Kami</span>
+                </a>
             </div>
         </div>
     </section>
 
     <section id="offerings" class="section">
         <div class="container reveal">
-            <span class="label-small">Core Pillars / Pilar Utama</span>
+            <span class="label-small"><span class="en">Core Pillars</span><span class="id">Pilar Utama</span></span>
             <div class="discovery-index">
                 <!-- 1. LEARN (Logic) -->
                 <a href="learning.html" class="index-item">
                     <div>
-                        <h4>Technical Thinking / <span class="lang-id" style="display: inline;">Logika Berpikir</span></h4>
-                        <p>Most tutorials teach you how to type; we teach you how to think. Master coding logic and architectural depth.</p>
-                        <p class="lang-id" style="margin-top: 0.5rem;">Banyak tutorial mengajarkan cara mengetik; kami mengajarkan cara berpikir. Kuasai logika pemrograman dan kedalaman arsitektur.</p>
+                        <h4><span class="en">Technical Thinking</span><span class="id">Logika Berpikir</span></h4>
+                        <p>
+                            <span class="en">Most tutorials teach you how to type; we teach you how to think. Master coding logic and architectural depth.</span>
+                            <span class="id">Banyak tutorial mengajarkan cara mengetik; kami mengajarkan cara berpikir. Kuasai logika pemrograman dan kedalaman arsitektur.</span>
+                        </p>
                     </div>
-                    <span class="text-accent" style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600;">The Guide / Panduan</span>
+                    <span class="text-accent" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">
+                        <span class="en">The Guide</span><span class="id">Panduan</span>
+                    </span>
                 </a>
 
                 <!-- 2. PRACTICE (Sunnah) -->
                 <a href="practice.html" class="index-item">
                     <div>
-                        <h4>Sunnah Discipline / <span class="lang-id" style="display: inline;">Disiplin Sunnah</span></h4>
-                        <p>Islam as a physical way of life. Precision through Archery and focus through Endurance Swimming.</p>
-                        <p class="lang-id" style="margin-top: 0.5rem;">Islam sebagai cara hidup fisik. Presisi melalui Memanah dan fokus melalui Renang Ketahanan.</p>
+                        <h4><span class="en">Sunnah Discipline</span><span class="id">Disiplin Sunnah</span></h4>
+                        <p>
+                            <span class="en">Islam as a physical way of life. Precision through Archery and focus through Endurance Swimming.</span>
+                            <span class="id">Islam sebagai cara hidup fisik. Presisi melalui Memanah dan fokus melalui Renang Ketahanan.</span>
+                        </p>
                     </div>
-                    <span class="text-accent" style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600;">The Practice / Praktik</span>
+                    <span class="text-accent" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">
+                        <span class="en">The Practice</span><span class="id">Praktik</span>
+                    </span>
                 </a>
 
                 <!-- 3. BUILD (ISO Systems) -->
                 <a href="systems.html" class="index-item">
                     <div>
-                        <h4>ISO-Ready Systems / <span class="lang-id" style="display: inline;">Sistem Standar ISO</span></h4>
-                        <p>Eliminate organizational chaos. Training sessions to build companies with an ISO 9001 documentation mindset.</p>
-                        <p class="lang-id" style="margin-top: 0.5rem;">Hilangkan kekacauan organisasi. Sesi pelatihan untuk membangun perusahaan dengan pola pikir dokumentasi ISO 9001.</p>
+                        <h4><span class="en">ISO-Ready Systems</span><span class="id">Sistem Standar ISO</span></h4>
+                        <p>
+                            <span class="en">Eliminate organizational chaos. Training sessions to build companies with an ISO 9001 documentation mindset.</span>
+                            <span class="id">Hilangkan kekacauan organisasi. Sesi pelatihan untuk membangun perusahaan dengan pola pikir dokumentasi ISO 9001.</span>
+                        </p>
                     </div>
-                    <span class="text-accent" style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600;">The Training / Pelatihan</span>
+                    <span class="text-accent" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">
+                        <span class="en">The Training</span><span class="id">Pelatihan</span>
+                    </span>
                 </a>
 
                 <!-- 4. ESSENTIALS (Brand) -->
                 <a href="essentials.html" class="index-item">
                     <div>
-                        <h4>Brand Frameworks / <span class="lang-id" style="display: inline;">Kerangka Brand</span></h4>
-                        <p>Strategic brand guides and operational essentials to ground your identity and infrastructure.</p>
-                        <p class="lang-id" style="margin-top: 0.5rem;">Panduan brand strategis dan kebutuhan operasional untuk memperkuat identitas dan infrastruktur Anda.</p>
+                        <h4><span class="en">Brand Frameworks</span><span class="id">Kerangka Brand</span></h4>
+                        <p>
+                            <span class="en">Strategic brand guides and operational essentials to ground your identity and infrastructure.</span>
+                            <span class="id">Panduan brand strategis dan kebutuhan operasional untuk memperkuat identitas dan infrastruktur Anda.</span>
+                        </p>
                     </div>
-                    <span class="text-accent" style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600;">The Shop / Produk</span>
+                    <span class="text-accent" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">
+                        <span class="en">The Shop</span><span class="id">Produk</span>
+                    </span>
                 </a>
             </div>
         </div>
@@ -87,26 +112,38 @@
 
     <section class="section bg-card" style="border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
         <div class="container text-center reveal">
-            <span class="label-small">Responsibility / Tanggung Jawab</span>
-            <p class="lead" style="max-width: 700px; margin: 2rem auto; font-family: var(--font-serif); font-style: italic;">
-                "True capability is developed through discipline and the responsibility to build systems that work."
-                <span class="lang-id" style="font-size: 1.2rem; margin-top: 1rem; opacity: 0.5;">"Kemampuan sejati dikembangkan melalui disiplin dan tanggung jawab untuk membangun sistem yang benar-benar bekerja."</span>
+            <span class="label-small"><span class="en">Responsibility</span><span class="id">Tanggung Jawab</span></span>
+            <p class="lead" style="max-width: 700px; margin: 2rem auto; font-style: italic;">
+                <span class="en">"True capability is developed through discipline and the responsibility to build systems that work."</span>
+                <span class="id">"Kemampuan sejati dikembangkan melalui disiplin dan tanggung jawab untuk membangun sistem yang benar-benar bekerja."</span>
             </p>
-            <a href="about.html" class="text-accent" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none;">Profile / Profil →</a>
+            <a href="about.html" class="text-accent" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none;">
+                <span class="en">Approach & Background →</span>
+                <span class="id">Pendekatan & Latar Belakang →</span>
+            </a>
         </div>
     </section>
 
     <section class="section">
         <div class="container text-center reveal">
-            <h2>Start With Clarity. <br><span class="lang-id">Mulai dengan Kejelasan.</span></h2>
-            <p class="text-muted" style="margin-bottom: 4rem;">Book your diagnostic consultation / *Jadwalkan konsultasi diagnostik Anda.*</p>
-            <a href="contact.html" class="btn btn-primary">Book Now / Pesan Sekarang</a>
+            <h2>
+                <span class="en">Start With Clarity.</span>
+                <span class="id">Mulai dengan Kejelasan.</span>
+            </h2>
+            <p class="text-muted" style="margin-bottom: 4rem;">
+                <span class="en">Book your diagnostic consultation.</span>
+                <span class="id">Jadwalkan konsultasi diagnostik Anda.</span>
+            </p>
+            <a href="contact.html" class="btn btn-primary">
+                <span class="en">Book Now</span>
+                <span class="id">Pesan Sekarang</span>
+            </a>
         </div>
     </section>
 
-    <footer class="footer" style="padding-bottom: 4rem; border-top: 1px solid var(--border-subtle);">
+    <footer class="footer" style="padding: 6rem 0; border-top: 1px solid var(--border-subtle);">
         <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4rem; margin-top: 4rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4rem;">
                 <div class="flex-col gap-2">
                     <span class="logo">Buana Studios</span>
                     <a href="tel:+6285720502217" class="text-muted" style="font-size: 0.9rem;">+62 857 2050 2217 (SMS/Call)</a>
@@ -123,7 +160,23 @@
     </footer>
 
     <script>
+        function updateLangUI(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-id').classList.toggle('active', lang === 'id');
+            localStorage.setItem('buana-lang', lang);
+        }
+
+        function toggleLang() {
+            const current = localStorage.getItem('buana-lang') || 'en';
+            const next = current === 'en' ? 'id' : 'en';
+            updateLangUI(next);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('buana-lang') || 'en';
+            updateLangUI(savedLang);
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
             }, { threshold: 0.1 });

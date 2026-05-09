@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Buana Studios | Contact</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.json">
     <style>
@@ -15,7 +15,7 @@
             border: none;
             border-bottom: 1px solid var(--border-strong);
             color: var(--text-main);
-            font-family: var(--font-sans);
+            font-family: var(--font-main);
             font-size: 1.1rem;
             margin-bottom: 3rem;
             border-radius: 0;
@@ -26,29 +26,32 @@
         }
     </style>
 </head>
-<body>
+<body data-lang="en">
     <nav class="navbar scrolled">
         <div class="container nav-flex">
             <a href="index.html" class="logo">Buana Studios</a>
             <div class="nav-desktop">
-                <a href="index.html">Home / Beranda</a>
-                <a href="journal.html">Notes / Catatan</a>
-                <a href="essentials.html">Essentials / Produk</a>
-                <a href="contact.html">Contact / Kontak</a>
+                <a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+                <a href="journal.html"><span class="en">Notes</span><span class="id">Catatan</span></a>
+                <a href="essentials.html"><span class="en">Essentials</span><span class="id">Produk</span></a>
+                <a href="contact.html"><span class="en">Contact</span><span class="id">Kontak</span></a>
+                <div class="lang-toggle" onclick="toggleLang()">
+                    <span id="btn-en">EN</span> / <span id="btn-id">ID</span>
+                </div>
             </div>
         </div>
     </nav>
 
     <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
         <div class="container reveal">
-            <span class="label-small" style="color: var(--accent-primary);">Inquiry / Kontak</span>
-            <h1 style="margin-bottom: 2rem;">
-                Start With <br>Clarity.
-                <span class="lang-id">Mulai dengan Kejelasan.</span>
+            <span class="label-small" style="color: var(--accent-primary);"><span class="en">Inquiry</span><span class="id">Kontak</span></span>
+            <h1>
+                <span class="en">Start With <br>Clarity.</span>
+                <span class="id">Mulai dengan <br>Kejelasan.</span>
             </h1>
             <p class="lead" style="margin: 0; max-width: 600px;">
-                Every project begins with a diagnostic consultation.
-                <span class="lang-id" style="font-size: 1.1rem; margin-top: 1rem;">Setiap proyek dimulai dengan konsultasi diagnostik.</span>
+                <span class="en">Every project begins with a diagnostic consultation to ensure technical alignment.</span>
+                <span class="id">Setiap proyek dimulai dengan konsultasi diagnostik untuk memastikan keselarasan teknis.</span>
             </p>
         </div>
     </section>
@@ -58,23 +61,25 @@
             <form style="max-width: 600px;">
                 <input type="email" placeholder="Email Address / Alamat Email">
                 <select>
-                    <option>Technical Thinking (Learn) / Berpikir Teknis</option>
-                    <option>Sunnah Discipline (Practice) / Disiplin Sunnah</option>
-                    <option>ISO Systems (Build) / Sistem ISO</option>
-                    <option>Brand Guides (Essentials) / Panduan Brand</option>
+                    <option><span class="en">Technical Thinking (Learn)</span><span class="id">Berpikir Teknis</span></option>
+                    <option><span class="en">Sunnah Discipline (Practice)</span><span class="id">Disiplin Sunnah</span></option>
+                    <option><span class="en">ISO Systems (Build)</span><span class="id">Sistem ISO</span></option>
+                    <option><span class="en">Brand Guides (Essentials)</span><span class="id">Panduan Brand</span></option>
                 </select>
                 <textarea rows="4" placeholder="Briefly describe your challenge / Jelaskan tantangan Anda secara singkat."></textarea>
-                <button type="button" class="btn btn-primary" style="width: 100%; padding: 1.5rem;">Submit Inquiry / Kirim</button>
+                <button type="button" class="btn btn-primary" style="width: 100%; padding: 1.5rem;">
+                    <span class="en">Submit Inquiry</span><span class="id">Kirim Sekarang</span>
+                </button>
             </form>
 
             <div style="margin-top: 10rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
                 <div>
-                    <h4 style="margin-bottom: 1rem;">Direct / Langsung</h4>
+                    <h4 style="margin-bottom: 1rem;"><span class="en">Direct</span><span class="id">Langsung</span></h4>
                     <a href="mailto:contact@buana.studio" style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem;">contact@buana.studio</a>
                     <a href="tel:+6285720502217" style="opacity: 0.5;">+62 857 2050 2217 (SMS/Call)</a>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 1rem;">Location / Lokasi</h4>
+                    <h4 style="margin-bottom: 1rem;"><span class="en">Location</span><span class="id">Lokasi</span></h4>
                     <p style="opacity: 0.5; line-height: 1.6;">
                         Jalan Bunga Mas No. 6,<br>
                         Bandung 40614, Indonesia
@@ -91,7 +96,20 @@
     </footer>
 
     <script>
+        function updateLangUI(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-id').classList.toggle('active', lang === 'id');
+            localStorage.setItem('buana-lang', lang);
+        }
+        function toggleLang() {
+            const current = localStorage.getItem('buana-lang') || 'en';
+            const next = current === 'en' ? 'id' : 'en';
+            updateLangUI(next);
+        }
         document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('buana-lang') || 'en';
+            updateLangUI(savedLang);
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
             }, { threshold: 0.1 });
