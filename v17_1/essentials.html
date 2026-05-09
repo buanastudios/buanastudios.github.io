@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studios | Essentials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body data-lang="en">
+    <nav class="navbar scrolled">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studios</a>
+            <div class="nav-desktop">
+                <a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+                <a href="journal.html"><span class="en">Notes</span><span class="id">Catatan</span></a>
+                <a href="essentials.html"><span class="en">Essentials</span><span class="id">Produk</span></a>
+                <a href="contact.html"><span class="en">Contact</span><span class="id">Kontak</span></a>
+                <div class="lang-toggle" onclick="toggleLang()">
+                    <span id="btn-en">EN</span> / <span id="btn-id">ID</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
+        <div class="container reveal">
+            <span class="label-small" style="color: var(--accent-primary);"><span class="en">Products</span><span class="id">Produk</span></span>
+            <h1>
+                <span class="en">Studio <br>Essentials.</span>
+                <span class="id">Produk <br>Studio.</span>
+            </h1>
+            <p class="lead" style="margin: 0; max-width: 600px;">
+                <span class="en">Strategic brand guides, operational frameworks, and digital infrastructure for modern studios.</span>
+                <span class="id">Panduan brand strategis, kerangka kerja operasional, dan infrastruktur digital untuk studio modern.</span>
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container flex-col reveal">
+            <div class="shelf-item">
+                <div>
+                    <span class="label-small" style="margin-bottom: 0.5rem;"><span class="en">Strategy</span><span class="id">Strategi</span></span>
+                    <h3><span class="en">Brand Guide Product</span><span class="id">Produk Panduan Brand</span></h3>
+                    <p>
+                        <span class="en">A comprehensive framework to ground your brand identity and communication.</span>
+                        <span class="id">Kerangka kerja komprehensif untuk memantapkan identitas brand dan komunikasi Anda.</span>
+                    </p>
+                </div>
+                <a href="contact.html" class="text-accent"><span class="en">Download</span><span class="id">Unduh</span></a>
+            </div>
+            <div class="shelf-item">
+                <div>
+                    <span class="label-small" style="margin-bottom: 0.5rem;"><span class="en">Infrastructure</span><span class="id">Infrastruktur</span></span>
+                    <h3><span class="en">Premium Domains</span><span class="id">Domain Premium</span></h3>
+                    <p>
+                        <span class="en">High-value names for starting significant new systems.</span>
+                        <span class="id">Nama-nama bernilai tinggi untuk memulai sistem baru yang signifikan.</span>
+                    </p>
+                </div>
+                <a href="contact.html" class="text-accent"><span class="en">View Portfolio</span><span class="id">Lihat</span></a>
+            </div>
+            <div class="shelf-item">
+                <div>
+                    <span class="label-small" style="margin-bottom: 0.5rem;"><span class="en">Operations</span><span class="id">Operasional</span></span>
+                    <h3><span class="en">SOP Frameworks</span><span class="id">Kerangka Kerja SOP</span></h3>
+                    <p>
+                        <span class="en">Standard Operating Procedure kits for organizational documentation clarity.</span>
+                        <span class="id">Paket Prosedur Operasional Standar untuk kejelasan dokumentasi organisasi.</span>
+                    </p>
+                </div>
+                <a href="contact.html" class="text-accent"><span class="en">Get Kit</span><span class="id">Dapatkan Paket</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="logo">Buana Studios</span>
+        </div>
+    </footer>
+
+    <script>
+        function updateLangUI(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-id').classList.toggle('active', lang === 'id');
+            localStorage.setItem('buana-lang', lang);
+        }
+        function toggleLang() {
+            const current = localStorage.getItem('buana-lang') || 'en';
+            const next = current === 'en' ? 'id' : 'en';
+            updateLangUI(next);
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('buana-lang') || 'en';
+            updateLangUI(savedLang);
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>

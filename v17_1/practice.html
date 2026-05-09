@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buana Studios | Practice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body data-lang="en">
+    <nav class="navbar scrolled">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buana Studios</a>
+            <div class="nav-desktop">
+                <a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+                <a href="journal.html"><span class="en">Notes</span><span class="id">Catatan</span></a>
+                <a href="essentials.html"><span class="en">Essentials</span><span class="id">Produk</span></a>
+                <a href="contact.html"><span class="en">Contact</span><span class="id">Kontak</span></a>
+                <div class="lang-toggle" onclick="toggleLang()">
+                    <span id="btn-en">EN</span> / <span id="btn-id">ID</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 60vh; text-align: left; align-items: flex-start; justify-content: flex-end;">
+        <div class="container reveal">
+            <span class="label-small" style="color: var(--accent-primary);"><span class="en">Way of Life</span><span class="id">Cara Hidup</span></span>
+            <h1>
+                <span class="en">Sunnah <br>Discipline.</span>
+                <span class="id">Disiplin <br>Sunnah.</span>
+            </h1>
+            <p class="lead" style="margin: 0; max-width: 600px;">
+                <span class="en">Appreciate Islam as a way of life through physical and mental discipline following the Sunnah.</span>
+                <span class="id">Menghayati Islam sebagai cara hidup melalui disiplin fisik dan mental sesuai Sunnah.</span>
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container flex-col reveal">
+            <div class="shelf-item">
+                <div>
+                    <h3><span class="en">Traditional Archery</span><span class="id">Memanah Tradisional</span></h3>
+                    <p>
+                        <span class="en">Developing precision, patience, and mental regulation through the bow.</span>
+                        <span class="id">Mengembangkan presisi, kesabaran, dan regulasi mental melalui panahan.</span>
+                    </p>
+                </div>
+                <a href="contact.html" class="text-accent"><span class="en">Inquire</span><span class="id">Tanya</span></a>
+            </div>
+            <div class="shelf-item">
+                <div>
+                    <h3><span class="en">Endurance Swimming</span><span class="id">Renang Ketahanan</span></h3>
+                    <p>
+                        <span class="en">Building physical endurance and rhythmic focus in the water.</span>
+                        <span class="id">Membangun daya tahan fisik dan fokus ritmis di dalam air.</span>
+                    </p>
+                </div>
+                <a href="contact.html" class="text-accent"><span class="en">Inquire</span><span class="id">Tanya</span></a>
+            </div>
+            <div class="shelf-item">
+                <div>
+                    <h3><span class="en">Guided Responsibility</span><span class="id">Bimbingan Tanggung Jawab</span></h3>
+                    <p>
+                        <span class="en">Mentorship for leaders and fathers to ground their life in disciplined habits.</span>
+                        <span class="id">Mentoring bagi para pemimpin dan ayah untuk memantapkan hidup dalam kebiasaan disiplin.</span>
+                    </p>
+                </div>
+                <a href="contact.html" class="text-accent"><span class="en">Discuss</span><span class="id">Diskusi</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="logo">Buana Studios</span>
+        </div>
+    </footer>
+
+    <script>
+        function updateLangUI(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-id').classList.toggle('active', lang === 'id');
+            localStorage.setItem('buana-lang', lang);
+        }
+        function toggleLang() {
+            const current = localStorage.getItem('buana-lang') || 'en';
+            const next = current === 'en' ? 'id' : 'en';
+            updateLangUI(next);
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('buana-lang') || 'en';
+            updateLangUI(savedLang);
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>
