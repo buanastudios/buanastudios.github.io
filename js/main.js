@@ -95,23 +95,32 @@ function initContactForm() {
     const service = form.querySelector('#f-service')?.value || '';
     const message = form.querySelector('#f-message')?.value.trim() || '';
 
-    // Show captured values immediately so you can verify what JS read
     if (success) {
       success.style.display = 'block';
       success.innerHTML = `
-        <p style="font-size:1.1rem;margin-bottom:0.75rem;">📋 Values captured:</p>
-        <table style="font-size:0.85rem;text-align:left;width:100%;border-collapse:collapse;">
-          <tr><td style="padding:3px 12px 3px 0;opacity:.6;">Name</td>    <td><strong>${name || '⚠ empty'}</strong></td></tr>
-          <tr><td style="padding:3px 12px 3px 0;opacity:.6;">Email</td>   <td><strong>${email || '⚠ empty'}</strong></td></tr>
-          <tr><td style="padding:3px 12px 3px 0;opacity:.6;">Service</td> <td><strong>${service || '⚠ empty'}</strong></td></tr>
-          <tr><td style="padding:3px 12px 3px 0;opacity:.6;">Message</td> <td><strong>${message || '⚠ empty'}</strong></td></tr>
-        </table>`;
+        <div style="text-align:center; padding:2rem 1rem;">
+          <div style="font-size:2.5rem; margin-bottom:1rem;">✓</div>
+          <h3 style="margin-bottom:0.75rem;">
+            <span class="en">Inquiry Received.</span>
+            <span class="id">Permintaan Diterima.</span>
+          </h3>
+          <p class="text-muted" style="font-size:0.95rem; line-height:1.6;">
+            <span class="en">Thank you for reaching out. We have received your message regarding <strong>${service}</strong> and will get back to you shortly.</span>
+            <span class="id">Terima kasih telah menghubungi kami. Kami telah menerima pesan Anda mengenai <strong>${service}</strong> dan akan segera membalas Anda.</span>
+          </p>
+        </div>`;
     }
 
     if (!service) {
       btn.disabled = false;
       btn.innerHTML = '<span class="en">Submit Inquiry</span><span class="id">Kirim Pertanyaan</span>';
-      if (success) success.innerHTML += '<p style="color:#e05555;margin-top:0.75rem;">⚠ Service is empty — not sent.</p>';
+      if (success) {
+        success.innerHTML = `
+          <p style="color:#e05555; text-align:center; padding:1rem;">
+            <span class="en">⚠ Please select a service.</span>
+            <span class="id">⚠ Silakan pilih layanan.</span>
+          </p>`;
+      }
       return;
     }
 
@@ -120,13 +129,21 @@ function initContactForm() {
         name, email, service, message,
         timestamp: new Date().toISOString()
       }).toString();
+      
       await fetch(SHEET_URL + '?' + qs, { method: 'GET', mode: 'no-cors' });
-      if (success) success.innerHTML += '<p style="color:#4caf50;margin-top:0.75rem;">✓ Sent to Google Sheets.</p>';
+      
       form.style.display = 'none';
+      window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
     } catch (err) {
       btn.disabled = false;
       btn.innerHTML = '<span class="en">Submit Inquiry</span><span class="id">Kirim Pertanyaan</span>';
-      if (success) success.innerHTML += `<p style="color:#e05555;margin-top:0.75rem;">✗ Error: ${err}</p>`;
+      if (success) {
+        success.innerHTML = `
+          <p style="color:#e05555; text-align:center; padding:1rem;">
+            <span class="en">✗ Something went wrong. Please try again or contact us directly.</span>
+            <span class="id">✗ Terjadi kesalahan. Silakan coba lagi atau hubungi kami langsung.</span>
+          </p>`;
+      }
     }
   });
 }
