@@ -488,3 +488,34 @@ a:hover { opacity: 0.6; }
   background: var(--accent-dim); color: var(--accent);
   border: 1px solid var(--accent-dim);
 }
+/* --- Spaces Layout ----------------------------------------- */
+.spaces-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .spaces-grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+  }
+  .spaces-grid.reversed {
+    grid-template-columns: 1fr 1.2fr;
+  }
+  .spaces-grid.reversed .space-info {
+    order: 1;
+  }
+  .spaces-grid.reversed .space-image-main {
+    order: 2;
+  }
+}
+
+.space-image-main img {
+  display: block;
+  box-shadow: 0 30px 60px -12px rgba(0,0,0,0.5);
+}
+
+.space-info h2 {
+  line-height: 1.1;
+}
