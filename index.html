@@ -1,199 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Buana Studios | Learn. Build. Practice.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Buana Studios | Learn. Build. Practice.</title>
+  <meta name="description" content="Buana Studios — a focused studio offering technical mentorship, ISO systems consulting, Sunnah discipline training, and custom software products from Bandung, Indonesia.">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body data-lang="en">
-    <nav class="navbar">
-        <div class="container nav-flex">
-            <a href="index.html" class="logo">Buana Studios</a>
-            <div class="nav-desktop">
-                <a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
-                <a href="journal.html"><span class="en">Notes</span><span class="id">Catatan</span></a>
-                <a href="essentials.html"><span class="en">Essentials</span><span class="id">Produk</span></a>
-                <a href="contact.html"><span class="en">Contact</span><span class="id">Kontak</span></a>
-                <div class="lang-toggle" onclick="toggleLang()">
-                    <span id="btn-en">EN</span> / <span id="btn-id">ID</span>
-                </div>
-            </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Buana Studios</a>
+      <div class="nav-links">
+        <a href="index.html" class="active"><span class="en">Home</span><span class="id">Beranda</span></a>
+        <a href="products.html"><span class="en">Products</span><span class="id">Produk</span></a>
+        <a href="journal.html"><span class="en">Notes</span><span class="id">Catatan</span></a>
+        <a href="contact.html"><span class="en">Contact</span><span class="id">Kontak</span></a>
+        <div class="lang-toggle" onclick="toggleLang()">
+          <span id="btn-en">EN</span> / <span id="btn-id">ID</span>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <section class="hero" style="min-height: 95vh; display: flex; align-items: center; text-align: center;">
-        <div class="container flex-col gap-4 reveal">
-            <h1>
-                <span class="en">Learn. Build. Practice.</span>
-                <span class="id">Belajar. Bangun. Praktik.</span>
-            </h1>
-            <p class="lead" style="max-width: 700px; margin: 0 auto;">
-                <span class="en">Beyond tutorials and checklists. Master the logic of coding, the discipline of Sunnah, and the systems of a high-standard institution.</span>
-                <span class="id">Melampaui tutorial dan daftar periksa. Kuasai logika pemrograman, disiplin Sunnah, dan sistem institusi standar tinggi.</span>
-            </p>
-            <div style="margin-top: 5rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-primary">
-                    <span class="en">Start Transformation</span>
-                    <span class="id">Mulai Transformasi</span>
-                </a>
-                <a href="#offerings" class="btn btn-outline" style="border: none; opacity: 0.4;">
-                    <span class="en">The Products</span>
-                    <span class="id">Produk Kami</span>
-                </a>
-            </div>
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container reveal">
+      <span class="label"><span class="en">Bandung, Indonesia</span><span class="id">Bandung, Indonesia</span></span>
+      <h1>
+        <span class="en">Learn.<br>Build.<br>Practice.</span>
+        <span class="id">Belajar.<br>Bangun.<br>Praktik.</span>
+      </h1>
+      <p class="lead" style="max-width:620px; margin-top:1.75rem;">
+        <span class="en">Practical work in systems, learning, and operations. Four disciplines. A small studio built around doing things properly.</span>
+        <span class="id">Kerja nyata dalam sistem, pembelajaran, dan operasional. Empat disiplin. Studio kecil yang dibangun untuk mengerjakan sesuatu dengan benar.</span>
+      </p>
+      <div class="btn-group">
+        <a href="products.html" class="btn btn-primary">
+          <span class="en">See Our Products</span><span class="id">Lihat Produk</span>
+        </a>
+        <a href="contact.html" class="btn btn-ghost">
+          <span class="en">Book a Consultation</span><span class="id">Konsultasi</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-bar-inner">
+        <span class="trust-item">📍 Bandung, Indonesia</span>
+        <span class="trust-item"><span class="en">Systems &amp; Technology</span><span class="id">Sistem &amp; Teknologi</span></span>
+        <span class="trust-item"><span class="en">Education &amp; Operations</span><span class="id">Pendidikan &amp; Operasional</span></span>
+        <span class="trust-item"><span class="en">ISO Documentation</span><span class="id">Dokumentasi ISO</span></span>
+        <span class="trust-item"><span class="en">Offline-First Software</span><span class="id">Perangkat Lunak Offline-First</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wing 1: Consulting Pillars -->
+  <section class="section">
+    <div class="container reveal">
+      <span class="label"><span class="en">Consulting &amp; Training</span><span class="id">Konsultasi &amp; Pelatihan</span></span>
+      <h2 style="margin-bottom:3rem;">
+        <span class="en">Four Pillars.</span>
+        <span class="id">Empat Pilar.</span>
+      </h2>
+      <div class="pillar-grid">
+        <a href="learning.html" class="pillar-card">
+          <h4><span class="en">Technical Thinking</span><span class="id">Logika Berpikir</span></h4>
+          <h3><span class="en">Code Like an Architect</span><span class="id">Kode Seperti Arsitek</span></h3>
+          <p><span class="en">We teach you how to think, not just how to type. Coding logic, software architecture, and 1-on-1 mentorship.</span><span class="id">Kami mengajarkan cara berpikir, bukan sekadar mengetik. Logika kode, arsitektur, dan pendampingan 1-on-1.</span></p>
+          <span class="go"><span class="en">The Guide →</span><span class="id">Panduan →</span></span>
+        </a>
+        <a href="practice.html" class="pillar-card">
+          <h4><span class="en">Sunnah Discipline</span><span class="id">Disiplin Sunnah</span></h4>
+          <h3><span class="en">Islam as a Way of Life</span><span class="id">Islam Sebagai Cara Hidup</span></h3>
+          <p><span class="en">Traditional archery, endurance swimming, and guided responsibility for fathers and leaders.</span><span class="id">Memanah tradisional, renang ketahanan, dan bimbingan tanggung jawab bagi ayah dan pemimpin.</span></p>
+          <span class="go"><span class="en">The Practice →</span><span class="id">Praktik →</span></span>
+        </a>
+        <a href="systems.html" class="pillar-card">
+          <h4><span class="en">ISO-Ready Systems</span><span class="id">Sistem Standar ISO</span></h4>
+          <h3><span class="en">Built for Audit. Built to Scale.</span><span class="id">Siap Audit. Siap Tumbuh.</span></h3>
+          <p><span class="en">Training institutions and companies to eliminate chaos with ISO 9001 documentation mindset.</span><span class="id">Melatih institusi dan perusahaan menghilangkan kekacauan dengan pola pikir dokumentasi ISO 9001.</span></p>
+          <span class="go"><span class="en">The Training →</span><span class="id">Pelatihan →</span></span>
+        </a>
+        <a href="essentials.html" class="pillar-card">
+          <h4><span class="en">Brand Frameworks</span><span class="id">Kerangka Brand</span></h4>
+          <h3><span class="en">Identity &amp; Infrastructure</span><span class="id">Identitas &amp; Infrastruktur</span></h3>
+          <p><span class="en">Strategic brand guides, SOP kits, and premium domain assets to ground your organisation.</span><span class="id">Panduan brand strategis, paket SOP, dan aset domain premium untuk memantapkan organisasi Anda.</span></p>
+          <span class="go"><span class="en">The Shop →</span><span class="id">Produk →</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wing 2: Software Products teaser -->
+  <section class="section" style="padding-top:0;">
+    <div class="container reveal">
+      <span class="label"><span class="en">Software Products</span><span class="id">Produk Perangkat Lunak</span></span>
+      <h2 style="margin-bottom:0.75rem;">
+        <span class="en">We Also Build.</span>
+        <span class="id">Kami Juga Membangun.</span>
+      </h2>
+      <p class="lead" style="max-width:600px; margin-bottom:3rem;">
+        <span class="en">Offline-first apps for family discovery, foundation management, finance, and hiring — built to the same standard we teach.</span>
+        <span class="id">Aplikasi offline-first untuk silsilah keluarga, manajemen yayasan, keuangan, dan rekrutmen — dibangun dengan standar yang sama yang kami ajarkan.</span>
+      </p>
+      <div class="product-grid">
+        <a href="products.html" class="product-card" style="text-decoration:none;">
+          <span class="tag tag-active">● <span class="en">Active</span><span class="id">Aktif</span></span>
+          <h3>Pancakaki</h3>
+          <p><span class="en">Family tree explorer. Offline-first kinship graph with D3 visualisation.</span><span class="id">Penjelajah silsilah keluarga. Graf hubungan kekerabatan offline-first dengan visualisasi D3.</span></p>
+          <span class="card-cta"><span class="en">Learn More →</span><span class="id">Selengkapnya →</span></span>
+        </a>
+        <a href="products.html" class="product-card" style="text-decoration:none;">
+          <span class="tag tag-active">● <span class="en">Active</span><span class="id">Aktif</span></span>
+          <h3>T.I.B.Y.A.N.</h3>
+          <p><span class="en">Foundation management system — personnel, education, and finance in one platform.</span><span class="id">Sistem manajemen yayasan — kepegawaian, pendidikan, dan keuangan dalam satu platform.</span></p>
+          <span class="card-cta"><span class="en">Learn More →</span><span class="id">Selengkapnya →</span></span>
+        </a>
+        <a href="products.html" class="product-card" style="text-decoration:none;">
+          <span class="tag tag-prototype">◐ <span class="en">Prototype</span><span class="id">Prototipe</span></span>
+          <h3>Tadbiir</h3>
+          <p><span class="en">Syariah-inspired personal finance UI. Clean, disciplined money management.</span><span class="id">UI keuangan pribadi berbasis syariah. Manajemen keuangan yang bersih dan disiplin.</span></p>
+          <span class="card-cta"><span class="en">Learn More →</span><span class="id">Selengkapnya →</span></span>
+        </a>
+        <a href="products.html" class="product-card" style="text-decoration:none;">
+          <span class="tag tag-dev">⟳ <span class="en">In Dev</span><span class="id">Dalam Pengembangan</span></span>
+          <h3>Hiring Platform</h3>
+          <p><span class="en">End-to-end recruitment workflow for schools and growing institutions.</span><span class="id">Alur rekrutmen ujung ke ujung untuk sekolah dan institusi yang berkembang.</span></p>
+          <span class="card-cta"><span class="en">Learn More →</span><span class="id">Selengkapnya →</span></span>
+        </a>
+      </div>
+      <div style="margin-top:2rem; text-align:center;">
+        <a href="products.html" class="btn btn-ghost"><span class="en">View All Products</span><span class="id">Semua Produk</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <div class="quote-band reveal">
+    <div class="container">
+      <blockquote>
+        <span class="en">"True capability is developed through discipline and the responsibility to build systems that work in the real world."</span>
+        <span class="id">"Kemampuan sejati dikembangkan melalui disiplin dan tanggung jawab membangun sistem yang benar-benar bekerja di dunia nyata."</span>
+      </blockquote>
+      <a href="about.html" class="text-accent" style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em;">
+        <span class="en">Our Approach →</span><span class="id">Pendekatan Kami →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section reveal">
+    <div class="container">
+      <h2><span class="en">Start With Clarity.</span><span class="id">Mulai Dengan Kejelasan.</span></h2>
+      <p class="text-muted" style="margin-bottom:2rem;">
+        <span class="en">Book your diagnostic consultation.</span>
+        <span class="id">Jadwalkan konsultasi diagnostik Anda.</span>
+      </p>
+      <a href="contact.html" class="btn btn-primary">
+        <span class="en">Book Now</span><span class="id">Pesan Sekarang</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo">Buana Studios</span>
+          <span class="addr">Jl. Bunga Mas No.6, Bandung 40614<br>West Java, Indonesia</span>
+          <a href="tel:+6285720502217" class="addr">+62 857 2050 2217</a>
         </div>
-    </section>
+        <nav class="footer-nav">
+          <a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+          <a href="products.html"><span class="en">Products</span><span class="id">Produk</span></a>
+          <a href="about.html"><span class="en">About</span><span class="id">Tentang</span></a>
+          <a href="journal.html"><span class="en">Notes</span><span class="id">Catatan</span></a>
+          <a href="contact.html"><span class="en">Contact</span><span class="id">Kontak</span></a>
+        </nav>
+      </div>
+      <p class="footer-copy">© 2025 Buana Studios. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <section id="offerings" class="section">
-        <div class="container reveal">
-            <span class="label-small"><span class="en">Core Pillars</span><span class="id">Pilar Utama</span></span>
-            <div class="discovery-index">
-                <!-- 1. LEARN (Logic) -->
-                <a href="learning.html" class="index-item">
-                    <div>
-                        <h4><span class="en">Technical Thinking</span><span class="id">Logika Berpikir</span></h4>
-                        <p>
-                            <span class="en">Most tutorials teach you how to type; we teach you how to think. Master coding logic and architectural depth.</span>
-                            <span class="id">Banyak tutorial mengajarkan cara mengetik; kami mengajarkan cara berpikir. Kuasai logika pemrograman dan kedalaman arsitektur.</span>
-                        </p>
-                    </div>
-                    <span class="text-accent" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">
-                        <span class="en">The Guide</span><span class="id">Panduan</span>
-                    </span>
-                </a>
+  <!-- Bottom Tab Bar -->
+  <nav class="bottom-tab-bar">
+    <a href="index.html" class="tab-item">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a.75.75 0 01-.75.75H15.75A.75.75 0 0115 21v-5.25H9V21a.75.75 0 01-.75.75H3.75A.75.75 0 013 21V9.75z"/></svg>
+      <span class="en">Home</span><span class="id">Beranda</span>
+    </a>
+    <a href="products.html" class="tab-item">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+      <span class="en">Products</span><span class="id">Produk</span>
+    </a>
+    <a href="journal.html" class="tab-item">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z"/></svg>
+      <span class="en">Notes</span><span class="id">Catatan</span>
+    </a>
+    <a href="contact.html" class="tab-item">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+      <span class="en">Contact</span><span class="id">Kontak</span>
+    </a>
+  </nav>
 
-                <!-- 2. PRACTICE (Sunnah) -->
-                <a href="practice.html" class="index-item">
-                    <div>
-                        <h4><span class="en">Sunnah Discipline</span><span class="id">Disiplin Sunnah</span></h4>
-                        <p>
-                            <span class="en">Islam as a physical way of life. Precision through Archery and focus through Endurance Swimming.</span>
-                            <span class="id">Islam sebagai cara hidup fisik. Presisi melalui Memanah dan fokus melalui Renang Ketahanan.</span>
-                        </p>
-                    </div>
-                    <span class="text-accent" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">
-                        <span class="en">The Practice</span><span class="id">Praktik</span>
-                    </span>
-                </a>
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/6285720502217?text=Hello%20Buana%20Studios%2C%20I%20found%20your%20website%20and%20would%20like%20to%20inquire." class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
-                <!-- 3. BUILD (ISO Systems) -->
-                <a href="systems.html" class="index-item">
-                    <div>
-                        <h4><span class="en">ISO-Ready Systems</span><span class="id">Sistem Standar ISO</span></h4>
-                        <p>
-                            <span class="en">Eliminate organizational chaos. Training sessions to build companies with an ISO 9001 documentation mindset.</span>
-                            <span class="id">Hilangkan kekacauan organisasi. Sesi pelatihan untuk membangun perusahaan dengan pola pikir dokumentasi ISO 9001.</span>
-                        </p>
-                    </div>
-                    <span class="text-accent" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">
-                        <span class="en">The Training</span><span class="id">Pelatihan</span>
-                    </span>
-                </a>
-
-                <!-- 4. ESSENTIALS (Brand) -->
-                <a href="essentials.html" class="index-item">
-                    <div>
-                        <h4><span class="en">Brand Frameworks</span><span class="id">Kerangka Brand</span></h4>
-                        <p>
-                            <span class="en">Strategic brand guides and operational essentials to ground your identity and infrastructure.</span>
-                            <span class="id">Panduan brand strategis dan kebutuhan operasional untuk memperkuat identitas dan infrastruktur Anda.</span>
-                        </p>
-                    </div>
-                    <span class="text-accent" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">
-                        <span class="en">The Shop</span><span class="id">Produk</span>
-                    </span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-card" style="border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-        <div class="container text-center reveal">
-            <span class="label-small"><span class="en">Responsibility</span><span class="id">Tanggung Jawab</span></span>
-            <p class="lead" style="max-width: 700px; margin: 2rem auto; font-style: italic;">
-                <span class="en">"True capability is developed through discipline and the responsibility to build systems that work."</span>
-                <span class="id">"Kemampuan sejati dikembangkan melalui disiplin dan tanggung jawab untuk membangun sistem yang benar-benar bekerja."</span>
-            </p>
-            <a href="about.html" class="text-accent" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none;">
-                <span class="en">Approach & Background →</span>
-                <span class="id">Pendekatan & Latar Belakang →</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container text-center reveal">
-            <h2>
-                <span class="en">Start With Clarity.</span>
-                <span class="id">Mulai dengan Kejelasan.</span>
-            </h2>
-            <p class="text-muted" style="margin-bottom: 4rem;">
-                <span class="en">Book your diagnostic consultation.</span>
-                <span class="id">Jadwalkan konsultasi diagnostik Anda.</span>
-            </p>
-            <a href="contact.html" class="btn btn-primary">
-                <span class="en">Book Now</span>
-                <span class="id">Pesan Sekarang</span>
-            </a>
-        </div>
-    </section>
-
-    <footer class="footer" style="padding: 6rem 0; border-top: 1px solid var(--border-subtle);">
-        <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4rem;">
-                <div class="flex-col gap-2">
-                    <span class="logo">Buana Studios</span>
-                    <a href="tel:+6285720502217" class="text-muted" style="font-size: 0.9rem;">+62 857 2050 2217 (SMS/Call)</a>
-                </div>
-                <div class="nav-desktop" style="display: flex;">
-                    <a href="index.html">Home</a>
-                    <a href="journal.html">Notes</a>
-                    <a href="essentials.html">Essentials</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-            <p style="margin-top: 4rem; opacity: 0.3; font-size: 0.8rem;">Jl. Bunga Mas No.6, Bandung 40614, West Java</p>
-        </div>
-    </footer>
-
-    <script>
-        function updateLangUI(lang) {
-            document.body.setAttribute('data-lang', lang);
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            document.getElementById('btn-id').classList.toggle('active', lang === 'id');
-            localStorage.setItem('buana-lang', lang);
-        }
-
-        function toggleLang() {
-            const current = localStorage.getItem('buana-lang') || 'en';
-            const next = current === 'en' ? 'id' : 'en';
-            updateLangUI(next);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('buana-lang') || 'en';
-            updateLangUI(savedLang);
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.reveal').forEach((el) => { observer.observe(el); });
-
-            window.addEventListener('scroll', () => {
-                const nav = document.querySelector('.navbar');
-                if (nav && window.scrollY > 50) nav.classList.add('scrolled');
-                else if (nav) nav.classList.remove('scrolled');
-            });
-        });
-
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
-            });
-        }
-    </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
