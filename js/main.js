@@ -1,5 +1,5 @@
 /* ============================================================
-   Buana Studios — core.js  (shared across all pages)
+   Buana Studios — main.js v19.0
    ============================================================ */
 
 /* ── Google Sheets webhook — update this if you redeploy ──── */

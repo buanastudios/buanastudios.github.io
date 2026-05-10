@@ -1,4 +1,4 @@
-const CACHE_NAME = 'buana-studio-v1';
+const CACHE_NAME = 'buana-studio-v19';
 const ASSETS = [
   '/',
   '/index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
   '/journal.html',
   '/learning.html',
   '/practice.html',
+  '/products.html',
   '/systems.html',
   '/css/style.css',
   '/js/main.js'
