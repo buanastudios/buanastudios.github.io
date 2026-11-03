@@ -1,0 +1,10 @@
+<aside class="sidebar" aria-label="Page navigation">
+  {% if include.title %}<h2 class="sidebar-title">{{ include.title | escape }}</h2>{% endif %}
+  <nav class="sidebar-nav">
+    {% for item in include.items %}
+    <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>
+      {{ item.title | escape }}
+    </a>
+    {% endfor %}
+  </nav>
+</aside>

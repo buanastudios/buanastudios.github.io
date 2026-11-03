@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  {% assign canonical_url = page.url | prepend: site.url %}
+  {% if page.canonical_url %}{% assign canonical_url = page.canonical_url %}{% endif %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>{{ page.title | default: site.title | escape }}</title>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description | escape }}">
+  {% endif %}
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page.og_description | default: page.description | escape }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#080808">
+</head>
+<body data-lang="{{ page.lang | default: 'en' }}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  {% include header.html %}
+  {% if page.sidebar %}
+  <div class="page-layout">
+    {% include sidebar.html items=page.sidebar title=page.sidebar_title %}
+    <main id="main-content">{{ content }}</main>
+  </div>
+  {% else %}
+  <main id="main-content">{{ content }}</main>
+  {% endif %}
+  {% include footer.html %}
+  {% include mobile-nav.html %}
+  {% if page.show_whatsapp != false %}
+    {% include whatsapp.html %}
+  {% endif %}
+  <script src="js/main.js"></script>
+</body>
+</html>

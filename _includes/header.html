@@ -1,0 +1,15 @@
+<nav class="navbar{% unless page.transparent_nav %} scrolled{% endunless %}">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">Buana Studios</a>
+    <div class="nav-links">
+      <a href="index.html"{% if page.nav_active == 'home' %} class="active"{% endif %}><span class="en">Home</span><span class="id">Beranda</span></a>
+      <a href="products.html"{% if page.nav_active == 'products' or page.nav_active == 'learning' or page.nav_active == 'practice' or page.nav_active == 'systems' or page.nav_active == 'essentials' %} class="active"{% endif %}><span class="en">Products</span><span class="id">Produk</span></a>
+      <a href="spaces.html"{% if page.nav_active == 'spaces' %} class="active"{% endif %}><span class="en">Spaces</span><span class="id">Ruang</span></a>
+      <a href="journal.html"{% if page.nav_active == 'journal' %} class="active"{% endif %}><span class="en">Notes</span><span class="id">Catatan</span></a>
+      <a href="contact.html"{% if page.nav_active == 'contact' %} class="active"{% endif %}><span class="en">Contact</span><span class="id">Kontak</span></a>
+      <div class="lang-toggle" onclick="toggleLang()">
+        <span id="btn-en">EN</span> / <span id="btn-id">ID</span>
+      </div>
+    </div>
+  </div>
+</nav>

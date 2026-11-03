@@ -1,0 +1,6 @@
+title: Buana Studios
+url: https://buanastudios.github.io
+markdown: kramdown
+
+exclude:
+  - README.md
