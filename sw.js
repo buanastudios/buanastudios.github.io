@@ -1,4 +1,4 @@
-const CACHE_NAME = 'buana-studio-v20';
+const CACHE_NAME = 'buana-studio-v21';
 const ASSETS = [
   './',
   'index.html',
@@ -13,6 +13,11 @@ const ASSETS = [
   'spaces.html',
   'css/style.css',
   'js/main.js',
+  'partials/header.html',
+  'partials/footer.html',
+  'partials/mobile-nav.html',
+  'partials/whatsapp.html',
+  'partials/sidebar.html',
   'manifest.json'
 ];
 
@@ -57,4 +62,3 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
-

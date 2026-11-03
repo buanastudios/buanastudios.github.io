@@ -125,6 +125,20 @@ a:hover { opacity: 0.6; }
 .nav-links a:hover { opacity: 1; }
 .nav-links a.active { opacity: 1; color: var(--accent); }
 
+.site-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+.site-sidebar nav { display: flex; flex-direction: column; gap: 0.75rem; }
+.site-sidebar a { color: var(--text-muted); font-size: 0.85rem; }
+.site-sidebar a:hover,
+.site-sidebar a.active { color: var(--accent); }
+
 @media (min-width: 768px) {
   .nav-links { display: flex; }
   body { padding-bottom: 0; }
